@@ -27,7 +27,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   void
      */
     public function testCount(PaginatorAbstract $paginatorObject)
@@ -37,7 +37,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testCurrent(PaginatorAbstract $paginatorObject)
@@ -48,7 +48,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testCurrent
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testNext(PaginatorAbstract $paginatorObject)
@@ -70,7 +70,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testNext
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testPrev(PaginatorAbstract $paginatorObject)
@@ -92,7 +92,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testPrev
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testLast(PaginatorAbstract $paginatorObject)
@@ -104,7 +104,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testLast
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testFirst(PaginatorAbstract $paginatorObject)
@@ -116,7 +116,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   void
      */
     public function testCountPage(PaginatorAbstract $paginatorObject)
@@ -126,7 +126,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   void
      */
     public function testIteration(PaginatorAbstract $paginatorObject)
@@ -146,7 +146,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testNextPage(PaginatorAbstract $paginatorObject)
@@ -170,7 +170,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testNextPage
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testNextPageCurrent(PaginatorAbstract $paginatorObject)
@@ -182,7 +182,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testNextPageCurrent
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testNextPageNext(PaginatorAbstract $paginatorObject)
@@ -204,7 +204,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testNextPageNext
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testNextPagePrev(PaginatorAbstract $paginatorObject)
@@ -226,7 +226,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testNextPagePrev
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testNextPageLast(PaginatorAbstract $paginatorObject)
@@ -238,7 +238,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testNextPageLast
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testNextPageFirst(PaginatorAbstract $paginatorObject)
@@ -250,7 +250,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testNextPage
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testPreviousPage(PaginatorAbstract $paginatorObject)
@@ -273,7 +273,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testPreviousPage
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testPreviousPageCurrent(PaginatorAbstract $paginatorObject)
@@ -285,7 +285,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testPreviousPageCurrent
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testPreviousPageNext(PaginatorAbstract $paginatorObject)
@@ -307,7 +307,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testPreviousPageNext
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testPreviousPagePrev(PaginatorAbstract $paginatorObject)
@@ -329,7 +329,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testPreviousPagePrev
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testPreviousPageLast(PaginatorAbstract $paginatorObject)
@@ -341,7 +341,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testPreviousPageLast
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   PaginatorAbstract
      */
     public function testPreviousPageFirst(PaginatorAbstract $paginatorObject)
@@ -353,7 +353,7 @@ class PaginatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    PaginatorAbstract
+     * @param    PaginatorAbstract      $paginatorObject
      * @return   void
      */
     public function testSetPage(PaginatorAbstract $paginatorObject)

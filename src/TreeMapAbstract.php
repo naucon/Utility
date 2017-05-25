@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\Map;
-use Naucon\Utility\MapInterface;
 use Naucon\Utility\Exception\TreeMapException;
 
 /**
@@ -24,8 +22,8 @@ abstract class TreeMapAbstract extends Map implements MapInterface
 {
     /**
      * @access   protected
-     * @param    mixed        map value
-     * @return   mixed        map key or false if not exist
+     * @param    mixed      $value      map value
+     * @return   mixed                  map key or false if not exist
      */
     protected function indexOf($value)
     {
@@ -34,9 +32,9 @@ abstract class TreeMapAbstract extends Map implements MapInterface
 
     /**
      * @access   protected
-     * @param    mixed        needle
-     * @param    array        haystack
-     * @param    bool         strict (typ save)
+     * @param    mixed        $needle       needle
+     * @param    array        $haystack     haystack
+     * @param    bool         $strict       strict (typ save)
      * @return   mixed        key or false
      */
     protected function searchArrayRecursive($needle, array $haystack, $strict = false)
@@ -73,8 +71,9 @@ abstract class TreeMapAbstract extends Map implements MapInterface
     /**
      * get map value
      *
-     * @param    mixed        map key
-     * @return   mixed        map value
+     * @param    mixed      $key        map key
+     * @return   mixed                  map value
+     * @throws   TreeMapException
      */
     public function get($key)
     {
@@ -97,9 +96,10 @@ abstract class TreeMapAbstract extends Map implements MapInterface
     /**
      * set map value
      *
-     * @param    mixed        map key
-     * @param    mixed        map value
-     * @return   mixed        map value
+     * @param    mixed      $key        map key
+     * @param    mixed      $value      map value
+     * @return   mixed                  map value
+     * @throws   TreeMapException
      */
     public function set($key, $value)
     {

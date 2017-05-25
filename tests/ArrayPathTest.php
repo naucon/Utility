@@ -65,7 +65,7 @@ class ArrayPathTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends     testGet
-     * @param       ArrayPath
+     * @param       ArrayPath       $arrayPathObject
      * @return      void
      */
     public function testSet(ArrayPath $arrayPathObject)

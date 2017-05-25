@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\MapAbstract;
-
 /**
  * Map Class
  *

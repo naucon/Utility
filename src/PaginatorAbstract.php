@@ -9,10 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\IteratorLimit;
-use Naucon\Utility\PaginatorInterface;
-use Naucon\Utility\Exception\PaginatorException;
-
 /**
  * Abstract Paginator Class
  * Pagination process of deviding entries into pages
@@ -40,7 +36,7 @@ abstract class PaginatorAbstract extends IteratorLimitAbstract implements Pagina
     }
 
     /**
-     * @param    int        item count
+     * @param    int        $count          item count
      * @return   void
      */
     public function setItemCount($count)
@@ -50,7 +46,7 @@ abstract class PaginatorAbstract extends IteratorLimitAbstract implements Pagina
     }
 
     /**
-     * @return    int                current page number
+     * @return    int                       current page number
      */
     public function getCurrentPageNumber()
     {
@@ -58,7 +54,7 @@ abstract class PaginatorAbstract extends IteratorLimitAbstract implements Pagina
     }
 
     /**
-     * @param    int                current page number
+     * @param    int        $pageNumber     current page number
      * @return   void
      */
     public function setCurrentPageNumber($pageNumber)
@@ -70,7 +66,7 @@ abstract class PaginatorAbstract extends IteratorLimitAbstract implements Pagina
     }
 
     /**
-     * @param    int                current page number
+     * @param    int        $pageNumber     current page number
      * @return   void
      * @see      PaginatorAbstract::setCurrentPageNumber()
      */
@@ -112,7 +108,7 @@ abstract class PaginatorAbstract extends IteratorLimitAbstract implements Pagina
     }
 
     /**
-     * @param    int                number of items per page
+     * @param    int        $itemsPerPage       number of items per page
      * @return   void
      */
     public function setItemsPerPage($itemsPerPage)

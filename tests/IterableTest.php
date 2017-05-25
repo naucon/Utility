@@ -25,7 +25,7 @@ class IterableTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Iterable
+     * @param    Iterable       $iterableObject
      * @return   void
      */
     public function testCount(Iterable $iterableObject)
@@ -35,7 +35,7 @@ class IterableTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Iterable
+     * @param    Iterable       $iterableObject
      * @return   Iterable
      */
     public function testCurrent(Iterable $iterableObject)
@@ -46,7 +46,7 @@ class IterableTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Iterable
+     * @param    Iterable       $iterableObject
      * @return   Iterable
      */
     public function testNext(Iterable $iterableObject)
@@ -103,7 +103,7 @@ class IterableTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends testNext
-     * @param    Iterable
+     * @param    Iterable       $iterableObject
      * @return   Iterable
      */
     public function testPrevious(Iterable $iterableObject)
@@ -160,7 +160,7 @@ class IterableTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Iterable
+     * @param    Iterable       $iterableObject
      * @return   Iterable
      */
     public function testLast(Iterable $iterableObject)
@@ -174,7 +174,7 @@ class IterableTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testLast
-     * @param    Iterable
+     * @param    Iterable       $iterableObject
      * @return   Iterable
      */
     public function testFirst(Iterable $iterableObject)
@@ -188,7 +188,7 @@ class IterableTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Iterable
+     * @param    Iterable       $iterableObject
      * @return   Iterable
      */
     public function testIteration(Iterable $iterableObject)
@@ -214,7 +214,7 @@ class IterableTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testFirst
-     * @param    Iterable
+     * @param    Iterable       $iterableObject
      * @return   Iterable
      */
     public function testSetPosition(Iterable $iterableObject)

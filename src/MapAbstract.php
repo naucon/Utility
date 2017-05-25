@@ -9,7 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\MapInterface;
 use Naucon\Utility\Exception\MapException;
 
 /**
@@ -29,7 +28,7 @@ abstract class MapAbstract implements MapInterface
 
     /**
      * @access    protected
-     * @param     mixed        map key
+     * @param     mixed     $key        map key
      * @return    bool
      */
     protected function isValidKey($key)
@@ -42,8 +41,8 @@ abstract class MapAbstract implements MapInterface
 
     /**
      * @access    protected
-     * @param     mixed        map value
-     * @return    mixed        map key or false if not exist
+     * @param     mixed     $value      map value
+     * @return    mixed                 map key or false if not exist
      */
     protected function indexOf($value)
     {
@@ -53,7 +52,7 @@ abstract class MapAbstract implements MapInterface
     /**
      * map contains index
      *
-     * @param    mixed        map index
+     * @param    mixed      $index      map index
      * @return   bool
      */
     protected function hasIndex($index)
@@ -67,7 +66,7 @@ abstract class MapAbstract implements MapInterface
     /**
      * map contains key
      *
-     * @param    mixed        map key
+     * @param    mixed      $key        map key
      * @return   bool
      */
     public function hasKey($key)
@@ -78,7 +77,7 @@ abstract class MapAbstract implements MapInterface
     /**
      * map contains value
      *
-     * @param    mixed        map value
+     * @param    mixed      $value      map value
      * @return   bool
      */
     public function hasValue($value)
@@ -92,8 +91,9 @@ abstract class MapAbstract implements MapInterface
     /**
      * get map value
      *
-     * @param    mixed        map key
-     * @return   mixed        map value
+     * @param    mixed      $key        map key
+     * @return   mixed                  map value
+     * @throws   MapException
      */
     public function get($key)
     {
@@ -120,9 +120,10 @@ abstract class MapAbstract implements MapInterface
     /**
      * set map value
      *
-     * @param    mixed        map key
-     * @param    mixed        map value
-     * @return   mixed        map value
+     * @param    mixed      $key        map key
+     * @param    mixed      $value      map value
+     * @return   mixed                  map value
+     * @throws   MapException
      */
     public function set($key, $value)
     {
@@ -140,7 +141,7 @@ abstract class MapAbstract implements MapInterface
     /**
      * set all map key-value-pairs
      *
-     * @param   array       map key-value-pairs
+     * @param   array       $all        map key-value-pairs
      * @return  void
      */
     public function setAll(array $all)
@@ -151,8 +152,9 @@ abstract class MapAbstract implements MapInterface
     /**
      * remove mapping
      *
-     * @param    mixed        map key
-     * @return    mixed        map value
+     * @param    mixed      $key        map key
+     * @return   mixed                  map value
+     * @throws   MapException
      */
     public function remove($key)
     {

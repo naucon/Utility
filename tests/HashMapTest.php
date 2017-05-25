@@ -77,6 +77,7 @@ class HashMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends   testInit
+     * @param     HashMap       $hashMapObject
      * @return    HashMap
      */
     public function testSet(HashMap $hashMapObject)
@@ -90,7 +91,7 @@ class HashMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    HashMap
+     * @param    HashMap        $hashMapObject
      * @return   void
      */
     public function testHasKey(HashMap $hashMapObject)
@@ -103,7 +104,7 @@ class HashMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    HashMap
+     * @param    HashMap        $hashMapObject
      * @return   void
      */
     public function testHasValue(HashMap $hashMapObject)
@@ -116,7 +117,7 @@ class HashMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    HashMap
+     * @param    HashMap        $hashMapObject
      * @return   void
      */
     public function testGet(HashMap $hashMapObject)
@@ -129,7 +130,7 @@ class HashMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    HashMap
+     * @param    HashMap        $hashMapObject
      * @return   void
      */
     public function testGetAll(HashMap $hashMapObject)
@@ -145,7 +146,7 @@ class HashMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    HashMap
+     * @param    HashMap        $hashMapObject
      * @return   void
      */
     public function testCount(HashMap $hashMapObject)
@@ -155,7 +156,7 @@ class HashMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    HashMap
+     * @param    HashMap        $hashMapObject
      * @return   void
      */
     public function testRemove(HashMap $hashMapObject)
@@ -170,7 +171,7 @@ class HashMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    HashMap
+     * @param    HashMap        $hashMapObject
      * @return   void
      */
     public function testClear(HashMap $hashMapObject)

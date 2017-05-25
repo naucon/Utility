@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\CollectionAbstract;
-
 /**
  * Collection Class
  *
@@ -24,7 +22,7 @@ class Collection extends CollectionAbstract
     /**
      * Constructor
      *
-     * @param    array    item
+     * @param    array      $items      item
      */
     public function __construct(array $items = array())
     {

@@ -35,7 +35,7 @@ class DelegateTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends     testInitDelegator
-     * @param       Delegator
+     * @param       Delegator       $delegatorObject
      * @return      void
      */
     public function testDelegate(Delegator $delegatorObject)

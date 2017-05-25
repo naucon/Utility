@@ -9,7 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\DelegateInterface;
 use Naucon\Utility\Exception\DelegateException;
 
 /**
@@ -36,8 +35,9 @@ class Delegate implements DelegateInterface
     /**
      * Constructor
      *
-     * @param       object              object
-     * @param       string              methode name of object
+     * @param       object      $object         object
+     * @param       string      $methodName     methode name of object
+     * @throws      DelegateException
      */
     public function __construct($object, $methodName)
     {
@@ -64,11 +64,8 @@ class Delegate implements DelegateInterface
 
 
     /**
-     * @param       mixed           arg 1
-     * @param       mixed           arg 2
-     * @param       mixed           ...
-     * @param       mixed           arg n
-     * @return      mixed           result of delegation
+     * @param       mixed       ...     $args
+     * @return      mixed       result of delegation
      */
     public function invoke()
     {
@@ -85,8 +82,9 @@ class Delegate implements DelegateInterface
     }
 
     /**
-     * @param       array           arguments / parameters
-     * @return      mixed           result of delegation
+     * @param       array       $args       arguments / parameters
+     * @return      mixed                   result of delegation
+     * @throws      DelegateException
      */
     public function invokeWithArgs($args = array())
     {

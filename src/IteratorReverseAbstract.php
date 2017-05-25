@@ -9,7 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\IteratorAbstract;
 use Naucon\Utility\Exception\IteratorReverseException;
 
 /**
@@ -193,8 +192,9 @@ abstract class IteratorReverseAbstract extends IteratorAbstract
     /**
      * set item of specified position to current item
      *
-     * @param        int                    item position
-     * @return        void
+     * @param   int     $position       item position
+     * @return  void
+     * @throws  IteratorReverseException
      */
     public function setItemPosition($position)
     {

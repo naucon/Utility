@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\SetInterface;
-
 /**
  * Hash Set Interface
  *

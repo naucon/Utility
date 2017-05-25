@@ -9,10 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\PaginatorInterface;
-use Naucon\Utility\IteratorDecoratorLimit;
-use Naucon\Utility\Exception\PaginatorDecoratorException;
-
 /**
  * Paginator Decorator Class
  * Pagination process of deviding entries into pages
@@ -32,8 +28,8 @@ class PaginatorDecorator extends IteratorDecoratorLimit implements PaginatorInte
     /**
      * Constructor
      *
-     * @param    IteratorInterface        iterator object
-     * @param    int                        items per page
+     * @param    IteratorInterface      $iteratorObject
+     * @param    int        $itemsPerPage       items per page
      */
     public function __construct(IteratorInterface $iteratorObject, $itemsPerPage = 50)
     {
@@ -51,7 +47,7 @@ class PaginatorDecorator extends IteratorDecoratorLimit implements PaginatorInte
     }
 
     /**
-     * @param    int        item count
+     * @param    int        $count      item count
      * @return   void
      */
     public function setItemCount($count)
@@ -69,7 +65,7 @@ class PaginatorDecorator extends IteratorDecoratorLimit implements PaginatorInte
     }
 
     /**
-     * @param    int                current page number
+     * @param    int        $pageNumber         current page number
      * @return   void
      */
     public function setCurrentPageNumber($pageNumber)
@@ -81,7 +77,7 @@ class PaginatorDecorator extends IteratorDecoratorLimit implements PaginatorInte
     }
 
     /**
-     * @param    int                current page number
+     * @param    int        $pageNumber         current page number
      * @return   void
      * @see      PaginatorAbstract::setCurrentPageNumber()
      */

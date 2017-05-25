@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\ArrayMergeAbstract;
-
 /**
  * Array Merge Class
  *
@@ -22,11 +20,11 @@ class ArrayMerge extends ArrayMergeAbstract
     /**
      * Constructor
      *
-     * @param       array               default array
-     * @param       array               deviation array 1
-     * @param       array               deviation array 2
+     * @param       array       $defaultArray               default array
+     * @param       array       $deviationArray1            deviation array 1
+     * @param       array       $deviationArray2            deviation array 2
      */
-    public function __construct($defaultArray=array(), $deviationArray1=array(), $deviationArray2=array())
+    public function __construct($defaultArray = array(), $deviationArray1 = array(), $deviationArray2 = array())
     {
         $this->defaultArray = $defaultArray;
         $this->deviationArray1 = $deviationArray1;

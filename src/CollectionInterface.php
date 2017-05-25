@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\IterableInterface;
-
 /**
  * Collection Interface
  *
@@ -23,7 +21,7 @@ interface CollectionInterface extends IterableInterface
     /**
      * add a element to the end of the collection
      *
-     * @param    mixed            element
+     * @param    mixed      $element        element
      * @return    void
      */
     public function add($element);
@@ -31,7 +29,7 @@ interface CollectionInterface extends IterableInterface
     /**
      * add elements to the end of the collection
      *
-     * @param    array            elements
+     * @param    array      $elements       elements
      * @return    void
      */
     public function addAll(array $elements);
@@ -46,7 +44,7 @@ interface CollectionInterface extends IterableInterface
     /**
      * collection contains a given element
      *
-     * @param    mixed            element
+     * @param    mixed      $element        element
      * @return    bool            true if the collection contains a specified element
      */
     public function contains($element);
@@ -61,7 +59,7 @@ interface CollectionInterface extends IterableInterface
     /**
      * remove a specified element from the collection
      *
-     * @param    mixed            element
+     * @param    mixed      $element        element
      * @return    bool
      */
     public function remove($element);

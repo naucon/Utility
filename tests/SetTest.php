@@ -25,7 +25,7 @@ class SetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Set
+     * @param    Set        $setObject
      * @return   void
      */
     public function testCount(Set $setObject)
@@ -35,7 +35,7 @@ class SetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Set
+     * @param    Set        $setObject
      * @return   Set
      */
     public function testIteration(Set $setObject)
@@ -61,7 +61,7 @@ class SetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Set
+     * @param    Set        $setObject
      * @return   void
      */
     public function testToArray(Set $setObject)
@@ -83,7 +83,7 @@ class SetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Set
+     * @param    Set        $setObject
      * @return   void
      */
     public function testContains(Set $setObject)
@@ -96,7 +96,7 @@ class SetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Set
+     * @param    Set        $setObject
      * @return   Set
      */
     public function testAdd(Set $setObject)
@@ -117,7 +117,7 @@ class SetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testAdd
-     * @param    Set
+     * @param    Set        $setObject
      * @return   Set
      */
     public function testAddDuplicate(Set $setObject)
@@ -133,7 +133,7 @@ class SetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testAdd
-     * @param    Set
+     * @param    Set        $setObject
      * @return   Set
      */
     public function testAddAll(Set $setObject)
@@ -155,7 +155,7 @@ class SetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testAddAll
-     * @param    Set
+     * @param    Set        $setObject
      * @return   Set
      */
     public function testAddAllDuplicate(Set $setObject)
@@ -204,7 +204,7 @@ class SetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Set
+     * @param    Set        $setObject
      * @return   void
      */
     public function testClear(Set $setObject)

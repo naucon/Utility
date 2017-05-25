@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\DelegateInterface;
-
 /**
  * Delegator Interface
  *
@@ -22,7 +20,7 @@ interface DelegatorInterface
 {
     /**
      * @abstract
-     * @param       DelegateInterface
+     * @param       DelegateInterface       $delegateObject
      * @return      mixed
      */
     public function register(DelegateInterface $delegateObject);

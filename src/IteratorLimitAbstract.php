@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\IteratorLimitInterface;
-use Naucon\Utility\IteratorAbstract;
 use Naucon\Utility\Exception\IteratorLimitException;
 
 /**
@@ -45,8 +43,9 @@ abstract class IteratorLimitAbstract extends IteratorAbstract implements Iterato
     }
 
     /**
-     * @param     int        item offset
+     * @param     int       $offset     item offset
      * @return    void
+     * @throws    IteratorLimitException
      */
     public function setItemOffset($offset)
     {
@@ -66,8 +65,9 @@ abstract class IteratorLimitAbstract extends IteratorAbstract implements Iterato
     }
 
     /**
-     * @param     int        item count
+     * @param     int       $count      item count
      * @return    void
+     * @throws    IteratorLimitException
      */
     public function setItemCount($count)
     {

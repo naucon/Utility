@@ -70,6 +70,7 @@ class TreeMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends   testInit
+     * @param     TreeMap       $mapObject
      * @return    TreeMap
      */
     public function testSet(TreeMap $mapObject)
@@ -86,7 +87,7 @@ class TreeMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    TreeMap
+     * @param    TreeMap        $mapObject
      * @return   void
      */
     public function testHasKey(TreeMap $mapObject)
@@ -99,7 +100,7 @@ class TreeMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    TreeMap
+     * @param    TreeMap        $mapObject
      * @return   void
      */
     public function testHasValue(TreeMap $mapObject)
@@ -114,7 +115,7 @@ class TreeMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    TreeMap
+     * @param    TreeMap        $mapObject
      * @return   void
      */
     public function testGet(TreeMap $mapObject)
@@ -132,7 +133,7 @@ class TreeMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    TreeMap
+     * @param    TreeMap        $mapObject
      * @return   void
      */
     public function testGetAll(TreeMap $mapObject)
@@ -155,7 +156,7 @@ class TreeMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    TreeMap
+     * @param    TreeMap        $mapObject
      * @return   void
      */
     public function testCount(TreeMap $mapObject)
@@ -165,7 +166,7 @@ class TreeMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    TreeMap
+     * @param    TreeMap        $mapObject
      * @return   void
      */
     public function testRemove(TreeMap $mapObject)
@@ -180,7 +181,7 @@ class TreeMapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    TreeMap
+     * @param    TreeMap        $mapObject
      * @return   void
      */
     public function testClear(TreeMap $mapObject)

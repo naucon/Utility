@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\ObservableInterface;
-
 /**
  * Observer Interface
  *
@@ -21,8 +19,8 @@ use Naucon\Utility\ObservableInterface;
 interface ObserverInterface
 {
     /**
-     * @param       ObservableInterface         observable object
-     * @param       mixed                       optional argument
+     * @param       ObservableInterface     $observableObject
+     * @param       mixed       $arg        optional argument
      * @return      void
      */
     public function update(ObservableInterface $observableObject, $arg);

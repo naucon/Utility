@@ -30,7 +30,7 @@ class IteratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends testInit
-     * @param    Iterator
+     * @param    Iterator       $iteratorObject
      * @return    void
      */
     public function testCount(Iterator $iteratorObject)
@@ -40,7 +40,7 @@ class IteratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends testInit
-     * @param    Iterator
+     * @param    Iterator       $iteratorObject
      * @return    void
      */
     public function testCountItems(Iterator $iteratorObject)
@@ -50,7 +50,7 @@ class IteratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends testInit
-     * @param    Iterator
+     * @param    Iterator       $iteratorObject
      * @return    Iterator
      */
     public function testCurrent(Iterator $iteratorObject)
@@ -63,7 +63,7 @@ class IteratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends testInit
-     * @param    Iterator
+     * @param    Iterator       $iteratorObject
      * @return    Iterator
      */
     public function testNext(Iterator $iteratorObject)
@@ -89,7 +89,7 @@ class IteratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends testNext
-     * @param    Iterator
+     * @param    Iterator       $iteratorObject
      * @return    Iterator
      */
     public function testPrevious(Iterator $iteratorObject)
@@ -115,7 +115,7 @@ class IteratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends testInit
-     * @param    Iterator
+     * @param    Iterator       $iteratorObject
      * @return    Iterator
      */
     public function testLast(Iterator $iteratorObject)
@@ -131,7 +131,7 @@ class IteratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends testLast
-     * @param    Iterator
+     * @param    Iterator       $iteratorObject
      * @return    Iterator
      */
     public function testFirst(Iterator $iteratorObject)
@@ -147,7 +147,7 @@ class IteratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends testInit
-     * @param    Iterator
+     * @param    Iterator       $iteratorObject
      * @return    Iterator
      */
     public function testIteration(Iterator $iteratorObject)
@@ -177,7 +177,7 @@ class IteratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends testIteration
-     * @param    Iterator
+     * @param    Iterator       $iteratorObject
      * @return    Iterator
      */
     public function testRewind(Iterator $iteratorObject)
@@ -191,7 +191,7 @@ class IteratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends testInit
-     * @param    Iterator
+     * @param    Iterator       $iteratorObject
      * @return    Iterator
      */
     public function testSetPosition(Iterator $iteratorObject)

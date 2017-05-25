@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\IteratorInterface;
-
 /**
  * Enumerator Interface
  *
@@ -23,32 +21,32 @@ interface EnumeratorInterface extends IteratorInterface
     /**
      * get value
      *
-     * @param    mixed            key
-     * @return    mixed            value
+     * @param    mixed      $key        key
+     * @return   mixed                  value
      */
     public function __get($key);
 
     /**
      * set key value pair
      *
-     * @param    mixed            key
-     * @param    mixed            value
-     * @return    void
+     * @param    mixed      $key        key
+     * @param    mixed      $value      value
+     * @return   void
      */
     public function __set($key, $value);
 
     /**
      * add or replace a value with a specified key
      *
-     * @param    mixed            key
-     * @param    mixed            value
-     * @return    mixed            value
+     * @param    mixed      $key        key
+     * @param    mixed      $value      value
+     * @return   mixed                  value
      */
     public function set($key, $value);
 
     /**
-     * @param    mixed            key
-     * @return    bool
+     * @param    mixed      $key        key
+     * @return   bool
      */
     public function remove($key);
 }

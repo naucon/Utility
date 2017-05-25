@@ -9,9 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\Set;
-use Naucon\Utility\ObservableInterface;
-use Naucon\Utility\ObserverInterface;
 use Naucon\Utility\Exception\ObservableException;
 
 /**
@@ -48,7 +45,7 @@ abstract class ObservableAbstract implements ObservableInterface
      * return set of observer
      *
      * @access      protected
-     * @return      Set
+     * @return      Set|ObserverInterface[]
      */
     protected function getObserverSetObject()
     {
@@ -61,8 +58,9 @@ abstract class ObservableAbstract implements ObservableInterface
     /**
      * add a observer to the observable
      *
-     * @param       ObserverInterface           observer object
+     * @param       ObserverInterface       $observerObject
      * @return      void
+     * @throws      ObservableException
      */
     public function addObserver(ObserverInterface $observerObject)
     {
@@ -86,7 +84,7 @@ abstract class ObservableAbstract implements ObservableInterface
     /**
      * remove the specified observer from the observable
      *
-     * @param       ObserverInterface           observer object
+     * @param       ObserverInterface       $observerObject
      * @return      void
      */
     public function removeObserver(ObserverInterface $observerObject)
@@ -107,10 +105,10 @@ abstract class ObservableAbstract implements ObservableInterface
     /**
      * notify all observer
      *
-     * @param       mixed                       optional argument
+     * @param       mixed       $arg        optional argument
      * @return      void
      */
-    public function notifyObservers($arg=null)
+    public function notifyObservers($arg = null)
     {
         if ($this->hasChanged()) {
             foreach ($this->getObserverSetObject() as $observerObject) {

@@ -9,9 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\TreeNodeInterface;
-use Naucon\Utility\IterableInterface;
-
 /**
  * Tree Interface
  *
@@ -22,13 +19,13 @@ use Naucon\Utility\IterableInterface;
 interface TreeInterface extends TreeNodeInterface, IterableInterface
 {
     /**
-     * @param    TreeNodeInterface            child tree node
+     * @param    TreeNodeInterface      $childObject        child tree node
      * @return   TreeNodeInterface            child tree node
      */
     public function add(TreeNodeInterface $childObject);
 
     /**
-     * @param    TreeNodeInterface            child tree node
+     * @param    TreeNodeInterface      $childObject        child tree node
      * @return   void
      */
     public function remove(TreeNodeInterface $childObject);
@@ -39,14 +36,14 @@ interface TreeInterface extends TreeNodeInterface, IterableInterface
     public function hasChilds();
 
     /**
-     * @param    TreeNodeInterface            child tree node
+     * @param    TreeNodeInterface      $childObject        child tree node
      * @return   TreeNodeInterface            child tree node
      * @see      TreeInterface::add()
      */
     public function addChild(TreeNodeInterface $childObject);
 
     /**
-     * @param    TreeNodeInterface            child tree node
+     * @param    TreeNodeInterface      $childObject        child tree node
      * @return   void
      * @see      TreeInterface::remove()
      */

@@ -21,24 +21,24 @@ interface MapInterface extends \Countable
     /**
      * map contains key
      *
-     * @param    mixed        map key
-     * @return    bool
+     * @param    mixed      $key        map key
+     * @return   bool
      */
     public function hasKey($key);
 
     /**
      * map contains value
      *
-     * @param    mixed        map value
-     * @return    bool
+     * @param    mixed      $value      map value
+     * @return   bool
      */
     public function hasValue($value);
 
     /**
      * get map value
      *
-     * @param    mixed        map key
-     * @return    mixed        map value
+     * @param    mixed      $key        map key
+     * @return   mixed                  map value
      */
     public function get($key);
 
@@ -52,16 +52,16 @@ interface MapInterface extends \Countable
     /**
      * set map value
      *
-     * @param    mixed        map key
-     * @param    mixed        map value
-     * @return    mixed        map value
+     * @param    mixed      $key        map key
+     * @param    mixed      $value      map value
+     * @return   mixed                  map value
      */
     public function set($key, $value);
 
     /**
      * set all map key-value-pairs
      *
-     * @param   array       map key-value-pairs
+     * @param   array       $all        map key-value-pairs
      * @return  void
      */
     public function setAll(array $all);
@@ -69,8 +69,8 @@ interface MapInterface extends \Countable
     /**
      * remove mapping
      *
-     * @param    mixed        map key
-     * @return    mixed        map value
+     * @param    mixed      $key        map key
+     * @return   mixed                  map value
      */
     public function remove($key);
 

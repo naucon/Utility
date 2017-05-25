@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\ListAbstract;
-
 /**
  * Array List Class
  *
@@ -24,7 +22,7 @@ class ArrayList extends ListAbstract
     /**
      * Constructor
      *
-     * @param    array    item
+     * @param    array    $items    items
      */
     public function __construct(array $items = array())
     {

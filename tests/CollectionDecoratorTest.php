@@ -27,7 +27,7 @@ class CollectionDecoratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    CollectionDecoratorAbstract
+     * @param    CollectionDecoratorAbstract        $collectionDecoratorObject
      * @return   void
      */
     public function testCount(CollectionDecoratorAbstract $collectionDecoratorObject)
@@ -37,7 +37,7 @@ class CollectionDecoratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    CollectionDecoratorAbstract
+     * @param    CollectionDecoratorAbstract        $collectionDecoratorObject
      * @return   CollectionDecoratorAbstract
      */
     public function testIteration(CollectionDecoratorAbstract $collectionDecoratorObject)
@@ -63,7 +63,7 @@ class CollectionDecoratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    CollectionDecoratorAbstract
+     * @param    CollectionDecoratorAbstract        $collectionDecoratorObject
      * @return   void
      */
     public function testToArray(CollectionDecoratorAbstract $collectionDecoratorObject)
@@ -85,7 +85,7 @@ class CollectionDecoratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    CollectionDecoratorAbstract
+     * @param    CollectionDecoratorAbstract        $collectionDecoratorObject
      * @return   void
      */
     public function testContains(CollectionDecoratorAbstract $collectionDecoratorObject)
@@ -98,7 +98,7 @@ class CollectionDecoratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    CollectionDecoratorAbstract
+     * @param    CollectionDecoratorAbstract        $collectionDecoratorObject
      * @return   CollectionDecoratorAbstract
      */
     public function testAdd(CollectionDecoratorAbstract $collectionDecoratorObject)
@@ -119,7 +119,7 @@ class CollectionDecoratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testAdd
-     * @param    CollectionDecoratorAbstract
+     * @param    CollectionDecoratorAbstract        $collectionDecoratorObject
      * @return   void
      */
     public function testAddAll(CollectionDecoratorAbstract $collectionDecoratorObject)
@@ -165,7 +165,7 @@ class CollectionDecoratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    CollectionDecorator
+     * @param    CollectionDecorator        $collectionDecoratorObject
      * @return   void
      */
     public function testClear(CollectionDecorator $collectionDecoratorObject)

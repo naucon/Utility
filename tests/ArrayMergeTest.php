@@ -83,7 +83,7 @@ class ArrayMergeTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends     testInit
-     * @param       ArrayMerge
+     * @param       ArrayMerge      $arrayMergeObject
      * @return      void
      */
     public function testMerge(ArrayMerge $arrayMergeObject)
@@ -104,7 +104,7 @@ class ArrayMergeTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends     testInit
-     * @param       ArrayMerge
+     * @param       ArrayMerge      $arrayMergeObject
      * @return      void
      */
     public function testGet(ArrayMerge $arrayMergeObject)
@@ -121,7 +121,7 @@ class ArrayMergeTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends     testInit
-     * @param       ArrayMerge
+     * @param       ArrayMerge      $arrayMergeObject
      * @return      void
      */
     public function testSet(ArrayMerge $arrayMergeObject)
@@ -139,7 +139,7 @@ class ArrayMergeTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends     testInit
-     * @param       ArrayMerge
+     * @param       ArrayMerge      $arrayMergeObject
      * @return      void
      */
     public function testDel(ArrayMerge $arrayMergeObject)
@@ -168,7 +168,7 @@ class ArrayMergeTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends     testInit
-     * @param       ArrayMerge
+     * @param       ArrayMerge      $arrayMergeObject
      * @return      void
      */
     public function testShowPath(ArrayMerge $arrayMergeObject)
@@ -201,7 +201,7 @@ class ArrayMergeTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends     testInit2
-     * @param       ArrayMerge
+     * @param       ArrayMerge      $arrayMergeObject
      * @return      void
      */
     public function testMerge2(ArrayMerge $arrayMergeObject)
@@ -231,7 +231,7 @@ class ArrayMergeTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends     testInit2
-     * @param       ArrayMerge
+     * @param       ArrayMerge      $arrayMergeObject
      * @return      void
      */
     public function testGet2(ArrayMerge $arrayMergeObject)

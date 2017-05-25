@@ -9,7 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\DelegateClosureAbstract;
 use Naucon\Utility\Exception\DelegateClosureException;
 
 /**
@@ -23,7 +22,8 @@ class DelegateClosure extends DelegateClosureAbstract
     /**
      * Constructor
      *
-     * @param       Closure
+     * @param       \Closure     $closure
+     * @throws      DelegateClosureException
      */
     public function __construct(\Closure $closure)
     {

@@ -9,9 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\ObserverInterface;
-use Naucon\Utility\Exception\ObserverException;
-
 /**
  * Observer Abstract Class
  *

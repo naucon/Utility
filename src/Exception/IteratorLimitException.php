@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility\Exception;
 
-use Naucon\Utility\Exception\IteratorException;
-
 /**
  * Iterator Limit Exception Class
  *

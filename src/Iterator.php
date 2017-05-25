@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\IteratorAbstract;
-
 /**
  * Iterator Class
  *
@@ -22,7 +20,7 @@ class Iterator extends IteratorAbstract
     /**
      * Constructor
      *
-     * @param    array            items
+     * @param    array      $items      items
      */
     public function __construct(array $items = array())
     {

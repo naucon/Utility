@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\ObserverInterface;
-
 /**
  * Observable Interface
  *
@@ -23,7 +21,7 @@ interface ObservableInterface
     /**
      * add a observer to the observable
      *
-     * @param       ObserverInterface           observer object
+     * @param       ObserverInterface       $observerObject
      * @return      void
      */
     public function addObserver(ObserverInterface $observerObject);
@@ -38,7 +36,7 @@ interface ObservableInterface
     /**
      * remove the specified observer from the observable
      *
-     * @param       ObserverInterface           observer object
+     * @param       ObserverInterface       $observerObject
      * @return      void
      */
     public function removeObserver(ObserverInterface $observerObject);
@@ -53,7 +51,7 @@ interface ObservableInterface
     /**
      * notify all observer
      *
-     * @param       mixed                       optional argument
+     * @param       mixed       $arg            optional argument
      * @return      void
      */
     public function notifyObservers($arg = null);

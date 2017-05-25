@@ -9,9 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\DelegatorInterface;
-use Naucon\Utility\Exception\DelegateException;
-
 /**
  * Delegator Class
  *
@@ -24,14 +21,14 @@ class Delegator implements DelegatorInterface
 {
     /**
      * @access      protected
-     * @var         array           delegation objects
+     * @var         array|Delegate[]        delegation objects
      */
     protected $delegationObjects = array();
 
 
     /**
      * @abstract
-     * @param       DelegateInterface
+     * @param       DelegateInterface       $delegateObject
      * @return      void
      */
     public function register(DelegateInterface $delegateObject)
@@ -40,10 +37,7 @@ class Delegator implements DelegatorInterface
     }
 
     /**
-     * @param       mixed           arg 1
-     * @param       mixed           arg 2
-     * @param       mixed           ...
-     * @param       mixed           arg n
+     * @param       mixed       ...     $args
      * @return      void
      */
     public function delegate()

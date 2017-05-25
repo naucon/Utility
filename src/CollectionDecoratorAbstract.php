@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\CollectionInterface;
-
 /**
  * Collection Decorator Abstract Class
  *
@@ -32,9 +30,9 @@ abstract class CollectionDecoratorAbstract implements CollectionInterface
 	/**
 	 * Constructor
 	 *
-	 * @param	CollectionInterface		collection object
+	 * @param	CollectionInterface		$collectionObject		collection object
 	 */
-	public function __construct( CollectionInterface $collectionObject )
+	public function __construct(CollectionInterface $collectionObject)
 	{
 		$this->collectionObject = $collectionObject;
 	}
@@ -73,25 +71,25 @@ abstract class CollectionDecoratorAbstract implements CollectionInterface
 	/**
 	 * add a element to the end of the collection
 	 *
-	 * @param	mixed			element
+	 * @param	mixed		$element		element
 	 * @return	void
 	 * @see CollectionInterface::add()
 	 */
 	public function add($element)
 	{
-	    return $this->getCollectionObject()->add($element);
+		$this->getCollectionObject()->add($element);
 	}
 
 	/**
 	 * add elements to the end of the collection
 	 *
-	 * @param	array			elements
+	 * @param	array		$elements		elements
 	 * @return	void
 	 * @see CollectionInterface::addAll()
 	 */
-	public function addAll( array $elements )
+	public function addAll(array $elements)
 	{
-	    return $this->getCollectionObject()->addAll($elements);
+		$this->getCollectionObject()->addAll($elements);
 	}
 
 	/**
@@ -108,7 +106,7 @@ abstract class CollectionDecoratorAbstract implements CollectionInterface
 	/**
 	 * collection contains a given element
 	 *
-	 * @param	mixed			element
+	 * @param	mixed		$element		element
 	 * @return	bool			true if the collection contains a specified element
 	 * @see CollectionInterface::contains()
 	 */
@@ -131,7 +129,7 @@ abstract class CollectionDecoratorAbstract implements CollectionInterface
 	/**
 	 * remove a specified element from the collection
 	 *
-	 * @param	mixed			element
+	 * @param	mixed		$element		element
 	 * @return	bool
 	 * @see CollectionInterface::remove()
 	 */

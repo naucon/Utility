@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\ListInterface;
-use Naucon\Utility\CollectionAbstract;
 use Naucon\Utility\Exception\ListException;
 
 /**
@@ -27,8 +25,8 @@ abstract class ListAbstract extends CollectionAbstract implements ListInterface
     /**
      * add a element to the end of the list
      *
-     * @param    mixed            element
-     * @return    void
+     * @param    mixed      $element        element
+     * @return   void
      */
     public function add($element)
     {
@@ -38,9 +36,10 @@ abstract class ListAbstract extends CollectionAbstract implements ListInterface
     /**
      * add a element to a specified position of the list
      *
-     * @param    int                element index
-     * @param    mixed            element
-     * @return    void
+     * @param    int        $index          element index
+     * @param    mixed      $element        element
+     * @return   void
+     * @throws   ListException
      */
     public function addWithIndex($index, $element)
     {
@@ -62,8 +61,8 @@ abstract class ListAbstract extends CollectionAbstract implements ListInterface
     /**
      * return the element of a specified position in the list
      *
-     * @param    int                index
-     * @return    mixed            element of the specified position
+     * @param    int        $index      index
+     * @return   mixed                  element of the specified position
      */
     public function get($index)
     {
@@ -76,8 +75,8 @@ abstract class ListAbstract extends CollectionAbstract implements ListInterface
     /**
      * return true if iterator contains a specified index.
      *
-     * @param    mixed        index
-     * @return    bool        has index
+     * @param    mixed      $index      index
+     * @return   bool                   has index
      */
     public function hasIndex($index)
     {
@@ -90,8 +89,8 @@ abstract class ListAbstract extends CollectionAbstract implements ListInterface
     /**
      * remove element with specified position from list
      *
-     * @param    int                element index
-     * @return    bool
+     * @param    int        $index      element index
+     * @return   bool
      */
     public function removeIndex($index)
     {
@@ -106,9 +105,10 @@ abstract class ListAbstract extends CollectionAbstract implements ListInterface
     /**
      * add or replace a element to a specified position of the list
      *
-     * @param    int                element index
-     * @param    mixed            element
-     * @return    mixed            element
+     * @param    int        $index      element index
+     * @param    mixed      $element    element
+     * @return   mixed                  element
+     * @throws   ListException
      */
     public function set($index, $element)
     {

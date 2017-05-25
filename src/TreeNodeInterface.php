@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\TreeInterface;
-
 /**
  * Tree Node Interface
  *
@@ -26,7 +24,7 @@ interface TreeNodeInterface
     public function hasParent();
 
     /**
-     * @return    TreeInterface            parent    tree node
+     * @return    TreeInterface            parent tree node
      */
     public function getParentObject();
 
@@ -37,13 +35,13 @@ interface TreeNodeInterface
     public function getParent();
 
     /**
-     * @param    TreeInterface            parent tree node
+     * @param    TreeInterface      $parentObject       parent tree node
      * @return   void
      */
     public function setParentObject(TreeInterface $parentObject = null);
 
     /**
-     * @param    TreeInterface            parent tree node
+     * @param    TreeInterface      $parentObject       parent tree node
      * @return   void
      * @see      TreeNodeInterface::setParentObject()
      */

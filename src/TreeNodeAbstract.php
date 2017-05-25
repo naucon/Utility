@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\TreeNodeInterface;
-use Naucon\Utility\TreeInterface;
 use Naucon\Utility\Exception\TreeNodeException;
 
 /**
@@ -60,7 +58,7 @@ abstract class TreeNodeAbstract implements TreeNodeInterface
     }
 
     /**
-     * @param    TreeInterface                parent tree node
+     * @param    TreeInterface      $parentObject       parent tree node
      * @return   void
      * @see      TreeNodeInterface::getChildObjects()
      */
@@ -70,7 +68,7 @@ abstract class TreeNodeAbstract implements TreeNodeInterface
     }
 
     /**
-     * @param    TreeInterface                parent tree node
+     * @param    TreeInterface      $parentObject       parent tree node
      * @return   void
      * @see      TreeNodeInterface::setParentObject()
      */
@@ -81,6 +79,7 @@ abstract class TreeNodeAbstract implements TreeNodeInterface
 
     /**
      * @return    void
+     * @throws    TreeNodeException
      */
     public function removeNode()
     {

@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility\Exception;
 
-use Naucon\Utility\Exception\DelegateException;
-
 /**
  * Delegate Closure Exception Class
  *

@@ -95,7 +95,7 @@ class HashSetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    HashSet
+     * @param    HashSet        $setObject
      * @return   void
      */
     public function testCount(HashSet $setObject)
@@ -105,7 +105,7 @@ class HashSetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    HashSet
+     * @param    HashSet        $setObject
      * @return   HashSet
      */
     public function testIteration(HashSet $setObject)
@@ -131,7 +131,7 @@ class HashSetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    HashSet
+     * @param    HashSet        $setObject
      * @return   void
      */
     public function testToArray(HashSet $setObject)
@@ -153,7 +153,7 @@ class HashSetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    HashSet
+     * @param    HashSet        $setObject
      * @return   void
      */
     public function testContains(HashSet $setObject)
@@ -172,7 +172,7 @@ class HashSetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    HashSet
+     * @param    HashSet        $setObject
      * @return   HashSet
      */
     public function testAdd(HashSet $setObject)
@@ -201,7 +201,7 @@ class HashSetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends   testAdd
-     * @param     HashSet
+     * @param     HashSet       $setObject
      * @return    HashSet
      */
     public function testAddDuplicate(HashSet $setObject)
@@ -217,7 +217,7 @@ class HashSetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testAdd
-     * @param    HashSet
+     * @param    HashSet        $setObject
      * @return   HashSet
      */
     public function testAddAll(HashSet $setObject)
@@ -261,7 +261,7 @@ class HashSetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testAddAll
-     * @param    HashSet
+     * @param    HashSet        $setObject
      * @return   HashSet
      */
     public function testAddAllDuplicate(HashSet $setObject)
@@ -322,7 +322,7 @@ class HashSetTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends testInit
-     * @param    HashSet
+     * @param    HashSet        $setObject
      * @return    void
      */
     public function testClear(HashSet $setObject)

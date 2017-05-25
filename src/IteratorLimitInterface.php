@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\IteratorInterface;
-
 /**
  * Iterator Limit Interface
  *
@@ -21,24 +19,24 @@ use Naucon\Utility\IteratorInterface;
 interface IteratorLimitInterface extends IteratorInterface
 {
     /**
-     * @return    int        item offset
+     * @return    int                   item offset
      */
     public function getItemOffset();
 
     /**
-     * @param    int        item offset
+     * @param     int       $offset     item offset
      * @return    void
      */
     public function setItemOffset($offset);
 
     /**
-     * @return    int        item count
+     * @return    int                   item count
      */
     public function getItemCount();
 
     /**
-     * @param    int        item count
-     * @return    void
+     * @param    int        $count      item count
+     * @return   void
      */
     public function setItemCount($count);
 }

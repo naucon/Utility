@@ -65,6 +65,7 @@ class MapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends   testInit
+     * @param     Map           $mapObject
      * @return    Map
      */
     public function testSet(Map $mapObject)
@@ -78,7 +79,7 @@ class MapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    Map
+     * @param    Map            $mapObject
      * @return   void
      */
     public function testHasKey(Map $mapObject)
@@ -91,7 +92,7 @@ class MapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    Map
+     * @param    Map            $mapObject
      * @return   void
      */
     public function testHasValue(Map $mapObject)
@@ -104,7 +105,7 @@ class MapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    Map
+     * @param    Map            $mapObject
      * @return   void
      */
     public function testGet(Map $mapObject)
@@ -117,7 +118,7 @@ class MapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    Map
+     * @param    Map            $mapObject
      * @return   void
      */
     public function testGetAll(Map $mapObject)
@@ -133,7 +134,7 @@ class MapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    Map
+     * @param    Map            $mapObject
      * @return   void
      */
     public function testCount(Map $mapObject)
@@ -143,7 +144,7 @@ class MapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    Map
+     * @param    Map            $mapObject
      * @return   void
      */
     public function testRemove(Map $mapObject)
@@ -158,7 +159,7 @@ class MapTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSet
-     * @param    Map
+     * @param    Map            $mapObject
      * @return   void
      */
     public function testClear(Map $mapObject)

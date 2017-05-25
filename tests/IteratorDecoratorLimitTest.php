@@ -31,7 +31,7 @@ class IteratorDecoratorLimitTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    IteratorDecoratorLimit
+     * @param    IteratorDecoratorLimit     $iteratorLimitObject
      * @return   void
      */
     public function testCount(IteratorDecoratorLimit $iteratorLimitObject)
@@ -41,7 +41,7 @@ class IteratorDecoratorLimitTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    IteratorDecoratorLimit
+     * @param    IteratorDecoratorLimit     $iteratorLimitObject
      * @return   IteratorDecoratorLimit
      */
     public function testCurrent(IteratorDecoratorLimit $iteratorLimitObject)
@@ -52,7 +52,7 @@ class IteratorDecoratorLimitTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testCurrent
-     * @param    IteratorDecoratorLimit
+     * @param    IteratorDecoratorLimit     $iteratorLimitObject
      * @return   IteratorDecoratorLimit
      */
     public function testNext(IteratorDecoratorLimit $iteratorLimitObject)
@@ -100,7 +100,7 @@ class IteratorDecoratorLimitTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testNext
-     * @param    IteratorDecoratorLimit
+     * @param    IteratorDecoratorLimit     $iteratorLimitObject
      * @return   IteratorDecoratorLimit
      */
     public function testPrev(IteratorDecoratorLimit $iteratorLimitObject)
@@ -148,7 +148,7 @@ class IteratorDecoratorLimitTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testPrev
-     * @param    IteratorDecoratorLimit
+     * @param    IteratorDecoratorLimit     $iteratorLimitObject
      * @return   IteratorDecoratorLimit
      */
     public function testLast(IteratorDecoratorLimit $iteratorLimitObject)
@@ -161,7 +161,7 @@ class IteratorDecoratorLimitTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testLast
-     * @param    IteratorDecoratorLimit
+     * @param    IteratorDecoratorLimit     $iteratorLimitObject
      * @return   IteratorDecoratorLimit
      */
     public function testFirst(IteratorDecoratorLimit $iteratorLimitObject)
@@ -174,7 +174,7 @@ class IteratorDecoratorLimitTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    IteratorDecoratorLimit
+     * @param    IteratorDecoratorLimit     $iteratorLimitObject
      * @return   IteratorDecoratorLimit
      */
     public function testIteration(IteratorDecoratorLimit $iteratorLimitObject)
@@ -194,7 +194,7 @@ class IteratorDecoratorLimitTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    IteratorDecoratorLimit
+     * @param    IteratorDecoratorLimit     $iteratorLimitObject
      * @return   void
      */
     public function testIterationWithOffset(IteratorDecoratorLimit $iteratorLimitObject)
@@ -222,7 +222,7 @@ class IteratorDecoratorLimitTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    IteratorDecoratorLimit
+     * @param    IteratorDecoratorLimit     $iteratorLimitObject
      * @return   void
      */
     public function testIterationWithOffset2(IteratorDecoratorLimit $iteratorLimitObject)

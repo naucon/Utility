@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\IteratorLimitAbstract;
-
 /**
  * Iterator Limit Class
  * subset of items
@@ -23,9 +21,9 @@ class IteratorLimit extends IteratorLimitAbstract
     /**
      * Constructor
      *
-     * @param    array            items
-     * @param    int                item offset
-     * @param    int                item count
+     * @param    array      $items      items
+     * @param    int        $offset     item offset
+     * @param    int        $count      item count
      */
     public function __construct(array $items = array(), $offset = 0, $count = 50)
     {

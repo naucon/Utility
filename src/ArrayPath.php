@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\Exception\ArrayPathException;
-
 /**
  * Array Path Class
  *
@@ -35,7 +33,7 @@ class ArrayPath
     /**
      * Constructor
      *
-     * @param       array                   any array
+     * @param       array       $array      any array
      */
     public function __construct(array $array = array())
     {
@@ -53,8 +51,8 @@ class ArrayPath
 
     /**
      * @access      protected
-     * @param       string                  delimiter eg. '.'
-     * @param       string
+     * @param       string      $delimiter      delimiter eg. '.'
+     * @param       string      $path
      * @return      array
      */
     protected function explodePath($delimiter, $path)
@@ -74,10 +72,10 @@ class ArrayPath
      * the path string contains the keys of the interlaced array - glued by a point.
      * e.g. the path of the array $array['key1']['key2']['key3'] is 'key1.key2.key3'
      *
-     * @param       string              array keys glued with a point
+     * @param       string      $path           array keys glued with a point
      * @return      mixed
      */
-    public function get($path=null)
+    public function get($path = null)
     {
         if ($this->getShowPath()) {
             return $path;
@@ -103,10 +101,10 @@ class ArrayPath
      * the path string contains the keys of the interlaced array - glued by a point.
      * e.g. the path of the array $array['key1']['key2']['key3'] is 'key1.key2.key3'
      *
-     * @param       string              array keys glued with a point
+     * @param       string      $path           array keys glued with a point
      * @return      bool
      */
-    public function has($path=null)
+    public function has($path = null)
     {
         if (!is_null($this->get($path))) {
             return true;
@@ -119,8 +117,8 @@ class ArrayPath
      * the path string contains the keys of the interlaced array - glued by a point.
      * e.g. the path of the array $array['key1']['key2']['key3'] is 'key1.key2.key3'
      *
-     * @param       string              array keys glued with a point
-     * @param       mixed               value
+     * @param       string      $path           array keys glued with a point
+     * @param       mixed       $value          value
      * @return      void
      */
     public function set($path, $value)
@@ -130,10 +128,10 @@ class ArrayPath
 
     /**
      * @access      protected
-     * @param       array               array
-     * @param       mixed               array keys in array or glued with a point in a string
-     * @param       mixed               value
-     * @return      array               new array
+     * @param       array       $array          array
+     * @param       mixed       $path           array keys in array or glued with a point in a string
+     * @param       mixed       $value          value
+     * @return      array                       new array
      */
     protected function setAction(array $array, $path, $value)
     {
@@ -163,15 +161,15 @@ class ArrayPath
                     $array[$key] = $value;
                 }
             }
-            return $array;
         }
+        return $array;
     }
 
     /**
      * set a array
      *
-     * @param    array
-     * @return    void
+     * @param    array          $array
+     * @return   void
      */
     public function setAll(array $array)
     {
@@ -183,7 +181,7 @@ class ArrayPath
      * the path string contains the keys of the interlaced array - glued by a point.
      * e.g. the path of the array $array['key1']['key2']['key3'] is 'key1.key2.key3'
      *
-     * @param       string              array keys glued with a point
+     * @param       string      $path           array keys glued with a point
      * @return      void
      */
     public function del($path)
@@ -194,9 +192,9 @@ class ArrayPath
 
     /**
      * @access      protected
-     * @param       array               array
-     * @param       string              array keys glued with a point
-     * @return      array               new array
+     * @param       array       $array          array
+     * @param       string      $path           array keys glued with a point
+     * @return      array                       new array
      */
     public function delAction(array $array, $path)
     {
@@ -217,8 +215,8 @@ class ArrayPath
                     $array[$key] = $this->delAction($array[$key], implode('.', $pathArrays));
                 }
             }
-            return $array;
         }
+        return $array;
     }
 
     /**
@@ -230,7 +228,7 @@ class ArrayPath
     }
 
     /**
-     * @param       bool                show path TRUE or FALSE
+     * @param       bool        $value          show path TRUE or FALSE
      * @return      void
      */
     public function setShowPath($value = false)

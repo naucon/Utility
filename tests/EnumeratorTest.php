@@ -25,7 +25,7 @@ class EnumeratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSimpleInit
-     * @param    EnumeratorAbstract
+     * @param    EnumeratorAbstract     $enumeratorObject
      * @return   void
      */
     public function testSimpleGet(EnumeratorAbstract $enumeratorObject)
@@ -39,7 +39,7 @@ class EnumeratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testSimpleInit
-     * @param    EnumeratorAbstract
+     * @param    EnumeratorAbstract     $enumeratorObject
      * @return   void
      */
     public function testSimpleIteration(EnumeratorAbstract $enumeratorObject)
@@ -70,7 +70,7 @@ class EnumeratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testEntryInit
-     * @param    EnumeratorAbstract
+     * @param    EnumeratorAbstract     $enumeratorObject
      * @return   EnumeratorAbstract
      */
     public function testEntrySet(EnumeratorAbstract $enumeratorObject)
@@ -84,7 +84,7 @@ class EnumeratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testEntrySet
-     * @param    EnumeratorAbstract
+     * @param    EnumeratorAbstract     $enumeratorObject
      * @return   EnumeratorAbstract
      */
     public function testEntryGet(EnumeratorAbstract $enumeratorObject)
@@ -100,7 +100,7 @@ class EnumeratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testEntryGet
-     * @param    EnumeratorAbstract
+     * @param    EnumeratorAbstract     $enumeratorObject
      * @return   void
      */
     public function testEntryIteration(EnumeratorAbstract $enumeratorObject)
@@ -122,7 +122,7 @@ class EnumeratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testEntryGet
-     * @param    EnumeratorAbstract
+     * @param    EnumeratorAbstract     $enumeratorObject
      * @return   EnumeratorAbstract
      */
     public function testEntryRemove(EnumeratorAbstract $enumeratorObject)

@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\IterableAbstract;
-
 /**
  * Iterable Class
  *
@@ -22,7 +20,7 @@ class Iterable extends IterableAbstract
     /**
      * Constructor
      *
-     * @param    IteratorInterface        iterator
+     * @param    IteratorInterface      $iteratorObject     iterator
      */
     public function __construct(IteratorInterface $iteratorObject = null)
     {

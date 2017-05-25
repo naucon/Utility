@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\TreeAbstract;
-
 /**
  * Tree Class
  *

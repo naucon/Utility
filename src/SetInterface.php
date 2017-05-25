@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\CollectionInterface;
-
 /**
  * Set Interface
  *

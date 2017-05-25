@@ -9,10 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\IteratorAbstract;
-use Naucon\Utility\CompositeElementInterface;
-use Naucon\Utility\Exception\CompositeException;
-
 /**
  * Composite Class
  *
@@ -25,8 +21,7 @@ use Naucon\Utility\Exception\CompositeException;
 abstract class CompositeAbstract extends IteratorAbstract implements CompositeElementInterface
 {
     /**
-     * @param    CompositeElementInterface
-     * @param    string                        name of element or null
+     * @param    CompositeElementInterface         $compositeElementObject
      * @return   CompositeElementInterface
      */
     public function add(CompositeElementInterface $compositeElementObject)
@@ -35,7 +30,7 @@ abstract class CompositeAbstract extends IteratorAbstract implements CompositeEl
     }
 
     /**
-     * @param    CompositeElementInterface
+     * @param    CompositeElementInterface      $compositeElementObject
      * @return   bool
      */
     public function remove(CompositeElementInterface $compositeElementObject)

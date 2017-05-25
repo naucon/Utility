@@ -9,10 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\SetAbstract;
-use Naucon\Utility\HashSetInterface;
-use Naucon\Utility\Exception\HashSetException;
-
 /**
  * Abstract Hash Set Class
  *
@@ -25,7 +21,7 @@ abstract class HashSetAbstract extends SetAbstract implements HashSetInterface
     /**
      * add a element to the end of the collection
      *
-     * @param    mixed            element
+     * @param    mixed      $element        element
      * @return   bool
      */
     public function add($element)
@@ -44,8 +40,8 @@ abstract class HashSetAbstract extends SetAbstract implements HashSetInterface
 
     /**
      * @access   protected
-     * @param    mixed            element
-     * @return   string           hash index
+     * @param    mixed      $element        element
+     * @return   string                     hash index
      */
     protected function hashIndex($element)
     {
@@ -61,8 +57,8 @@ abstract class HashSetAbstract extends SetAbstract implements HashSetInterface
     /**
      * collection contains a given element
      *
-     * @param    mixed            element
-     * @return   bool             true if the hashset contains a specified element
+     * @param    mixed      $element        element
+     * @return   bool                       true if the hashset contains a specified element
      */
     public function contains($element)
     {
@@ -77,7 +73,7 @@ abstract class HashSetAbstract extends SetAbstract implements HashSetInterface
     /**
      * remove a specified element from the collection
      *
-     * @param    mixed            element
+     * @param    mixed      $element        element
      * @return   bool
      */
     public function remove($element)

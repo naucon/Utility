@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility\Exception;
 
-use Naucon\Utility\Exception\IteratorException;
-
 /**
  * Reverse Iterator Decorator Exception Class
  *

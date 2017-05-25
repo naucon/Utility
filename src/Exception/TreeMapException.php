@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility\Exception;
 
-use Naucon\Utility\Exception\MapException;
-
 /**
  * Tree Map Exception Class
  *

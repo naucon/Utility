@@ -9,9 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\HashSet;
-use Naucon\Utility\TreeInterface;
-use Naucon\Utility\TreeNodeAbstract;
 use Naucon\Utility\Exception\TreeException;
 
 /**
@@ -65,7 +62,7 @@ abstract class TreeAbstract extends TreeNodeAbstract implements TreeInterface
 
     /**
      * @access    protected
-     * @return    IteratorInterface            child tree nodes
+     * @return    HashSet            child tree nodes
      */
     protected function getChildsObject()
     {
@@ -86,8 +83,9 @@ abstract class TreeAbstract extends TreeNodeAbstract implements TreeInterface
     }
 
     /**
-     * @param     TreeNodeInterface            child tree node
+     * @param     TreeNodeInterface     $childObject        child tree node
      * @return    TreeNodeInterface            child tree node
+     * @throws    TreeException
      */
     public function add(TreeNodeInterface $childObject)
     {
@@ -101,7 +99,7 @@ abstract class TreeAbstract extends TreeNodeAbstract implements TreeInterface
     }
 
     /**
-     * @param    TreeNodeInterface            child tree node
+     * @param    TreeNodeInterface      $childObject        child tree node
      * @return   void
      * @see      TreeInterface::add()
      */
@@ -111,7 +109,7 @@ abstract class TreeAbstract extends TreeNodeAbstract implements TreeInterface
     }
 
     /**
-     * @param    TreeNodeInterface            child tree node
+     * @param    TreeNodeInterface      $childObject        child tree node
      * @return   void
      */
     public function remove(TreeNodeInterface $childObject)
@@ -122,7 +120,7 @@ abstract class TreeAbstract extends TreeNodeAbstract implements TreeInterface
     }
 
     /**
-     * @param    TreeNodeInterface            child tree node
+     * @param    TreeNodeInterface      $childObject        child tree node
      * @return   void
      * @see      TreeInterface::remove()
      */

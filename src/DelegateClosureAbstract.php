@@ -9,7 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\DelegateInterface;
 use Naucon\Utility\Exception\DelegateClosureException;
 
 /**
@@ -22,17 +21,15 @@ use Naucon\Utility\Exception\DelegateClosureException;
 abstract class DelegateClosureAbstract implements DelegateInterface
 {
     /**
-     * @var     Closure
+     * @var     \Closure
      */
     protected $closure = null;
 
 
     /**
-     * @param       mixed        arg 1
-     * @param       mixed        arg 2
-     * @param       mixed ...
-     * @param       mixed        arg n
-     * @return      mixed        result of delegation
+     * @param       mixed       ...     $args
+     * @return      mixed                   result of delegation
+     * @throws      DelegateClosureException
      */
     public function invoke()
     {
@@ -53,8 +50,9 @@ abstract class DelegateClosureAbstract implements DelegateInterface
     }
 
     /**
-     * @param       array        arguments / parameters
-     * @return      mixed        result of delegation
+     * @param       array       $args       arguments / parameters
+     * @return      mixed                   result of delegation
+     * @throws      DelegateClosureException
      */
     public function invokeWithArgs($args = array())
     {

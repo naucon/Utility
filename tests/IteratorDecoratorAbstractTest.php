@@ -31,7 +31,7 @@ class IteratorDecoratorAbstractTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    IteratorDecoratorAbstract
+     * @param    IteratorDecoratorAbstract      $iteratorObject
      * @return   void
      */
     public function testCount(IteratorDecoratorAbstract $iteratorObject)
@@ -41,7 +41,7 @@ class IteratorDecoratorAbstractTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    IteratorDecoratorAbstract
+     * @param    IteratorDecoratorAbstract      $iteratorObject
      * @return   void
      */
     public function testCountItems(IteratorDecoratorAbstract $iteratorObject)
@@ -51,7 +51,7 @@ class IteratorDecoratorAbstractTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    IteratorDecoratorAbstract
+     * @param    IteratorDecoratorAbstract      $iteratorObject
      * @return   IteratorDecoratorAbstract
      */
     public function testCurrent(IteratorDecoratorAbstract $iteratorObject)
@@ -64,7 +64,7 @@ class IteratorDecoratorAbstractTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    IteratorDecoratorAbstract
+     * @param    IteratorDecoratorAbstract      $iteratorObject
      * @return   IteratorDecoratorAbstract
      */
     public function testNext(IteratorDecoratorAbstract $iteratorObject)
@@ -90,7 +90,7 @@ class IteratorDecoratorAbstractTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testNext
-     * @param    IteratorDecoratorAbstract
+     * @param    IteratorDecoratorAbstract      $iteratorObject
      * @return   IteratorDecoratorAbstract
      */
     public function testPrevious(IteratorDecoratorAbstract $iteratorObject)
@@ -116,7 +116,7 @@ class IteratorDecoratorAbstractTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    IteratorDecoratorAbstract
+     * @param    IteratorDecoratorAbstract      $iteratorObject
      * @return   IteratorDecoratorAbstract
      */
     public function testLast(IteratorDecoratorAbstract $iteratorObject)
@@ -132,7 +132,7 @@ class IteratorDecoratorAbstractTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testLast
-     * @param    IteratorDecoratorAbstract
+     * @param    IteratorDecoratorAbstract      $iteratorObject
      * @return   IteratorDecoratorAbstract
      */
     public function testFirst(IteratorDecoratorAbstract $iteratorObject)
@@ -148,7 +148,7 @@ class IteratorDecoratorAbstractTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    IteratorDecoratorAbstract
+     * @param    IteratorDecoratorAbstract      $iteratorObject
      * @return   IteratorDecoratorAbstract
      */
     public function testIteration(IteratorDecoratorAbstract $iteratorObject)
@@ -167,7 +167,7 @@ class IteratorDecoratorAbstractTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testIteration
-     * @param    IteratorDecoratorAbstract
+     * @param    IteratorDecoratorAbstract      $iteratorObject
      * @return   IteratorDecoratorAbstract
      */
     public function testRewind(IteratorDecoratorAbstract $iteratorObject)
@@ -181,7 +181,7 @@ class IteratorDecoratorAbstractTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    IteratorDecoratorAbstract
+     * @param    IteratorDecoratorAbstract      $iteratorObject
      * @return   IteratorDecoratorAbstract
      */
     public function testSetPosition(IteratorDecoratorAbstract $iteratorObject)

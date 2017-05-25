@@ -9,7 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\IteratorDecoratorAbstract;
 use Naucon\Utility\Exception\IteratorDecoratorReverseException;
 
 /**
@@ -188,8 +187,9 @@ class IteratorDecoratorReverse extends IteratorDecoratorAbstract
     /**
      * set item of specified position to current item
      *
-     * @param       int                 item position
+     * @param       int     $position       item position
      * @return      void
+     * @throws      IteratorDecoratorReverseException
      */
     public function setItemPosition($position)
     {

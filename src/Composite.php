@@ -9,9 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\CompositeAbstract;
-use Naucon\Utility\Exception\CompositeException;
-
 /**
  * Composite Class
  *

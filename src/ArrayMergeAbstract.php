@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\ArrayPath;
-
 /**
  * Array Merge Abstract Class
  *
@@ -80,7 +78,7 @@ abstract class ArrayMergeAbstract
     }
 
     /**
-     * @param       array               deviation array 1
+     * @param       array       $array  deviation array 1
      * @return      void
      */
     protected function setDeviationArray1($array = array())
@@ -97,7 +95,7 @@ abstract class ArrayMergeAbstract
     }
 
     /**
-     * @param       array               deviation array 2
+     * @param       array       $array  deviation array 2
      * @return      void
      */
     protected function setDeviationArray2($array = array())
@@ -121,12 +119,12 @@ abstract class ArrayMergeAbstract
     /**
      * set merged array 1
      *
-     * @param       array               merged array 1
+     * @param       array       $value  merged array 1
      * @return      void
      */
     protected function setMergedArray1($value)
     {
-        return $this->mergedArray1 = $value;
+        $this->mergedArray1 = $value;
     }
 
     /**
@@ -145,12 +143,12 @@ abstract class ArrayMergeAbstract
     /**
      * set merged array 2
      *
-     * @param       array               merged array 2
+     * @param       array       $value  merged array 2
      * @return      void
      */
     protected function setMergedArray2($value)
     {
-        return $this->mergedArray2 = $value;
+        $this->mergedArray2 = $value;
     }
 
     /**
@@ -166,12 +164,12 @@ abstract class ArrayMergeAbstract
     /**
      * set merged array
      *
-     * @param       array               merged array
+     * @param       array       $value  merged array
      * @return      void
      */
     public function setMergedArray($value)
     {
-        return $this->setMergedArray2($value);
+        $this->setMergedArray2($value);
     }
 
     /**
@@ -217,7 +215,7 @@ abstract class ArrayMergeAbstract
     /**
      * set deviation arrays
      *
-     * @param       array               merged array
+     * @param       array       $mergedArray    merged array
      * @return      void
      */
     protected function setDeviation($mergedArray)
@@ -232,7 +230,7 @@ abstract class ArrayMergeAbstract
     }
 
     /**
-     * @return      ArrayPath           array path object
+     * @return      ArrayPath               array path object
      */
     protected function getArrayPathObject()
     {
@@ -243,8 +241,8 @@ abstract class ArrayMergeAbstract
     }
 
     /**
-     * @param       string              array path
-     * @return      mixed               get value
+     * @param       string      $path       array path
+     * @return      mixed                   get value
      */
     public function get($path = null)
     {
@@ -252,8 +250,8 @@ abstract class ArrayMergeAbstract
     }
 
     /**
-     * @param       string              array path
-     * @return      void
+     * @param       string      $path       array path
+     * @return      bool
      */
     public function has($path)
     {
@@ -261,26 +259,26 @@ abstract class ArrayMergeAbstract
     }
 
     /**
-     * @param       string              array path
-     * @param       mixed               new value
+     * @param       string      $path       array path
+     * @param       mixed       $value      new value
      * @return      void
      */
     public function set($path, $value)
     {
-        return $this->getArrayPathObject()->set($path, $value);
+        $this->getArrayPathObject()->set($path, $value);
     }
 
     /**
-     * @param       string              array path
+     * @param       string      $path       array path
      * @return      void
      */
     public function del($path)
     {
-        return $this->getArrayPathObject()->del($path);
+        $this->getArrayPathObject()->del($path);
     }
 
     /**
-     * @return      bool                show path TRUE or FALSE
+     * @return      bool                    show path TRUE or FALSE
      */
     public function getShowPath()
     {
@@ -288,7 +286,7 @@ abstract class ArrayMergeAbstract
     }
 
     /**
-     * @param       bool                show path TRUE or FALSE
+     * @param       bool        $value      show path TRUE or FALSE
      * @return      void
      */
     public function setShowPath($value = false)
@@ -298,9 +296,9 @@ abstract class ArrayMergeAbstract
 
     /**
      * @access      protected
-     * @param        array               array 1
-     * @param        array                array 2
-     * @return        array                merged array
+     * @param       array       $array1     array 1
+     * @param       array       $array2     array 2
+     * @return      array                   merged array
      */
     protected function mergeArray(array $array1 = array(), array $array2 = array())
     {
@@ -320,9 +318,9 @@ abstract class ArrayMergeAbstract
 
     /**
      * @access      protected
-     * @param       array               merged array
-     * @param        array                default array
-     * @return        array                deviation array
+     * @param       array       $defaultArray       merged array
+     * @param       array       $mergedArray        default array
+     * @return      array                           deviation array
      */
     protected function deviationArray(array $defaultArray, array $mergedArray)
     {

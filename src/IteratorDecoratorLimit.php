@@ -9,7 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\IteratorDecoratorAbstract;
 use Naucon\Utility\Exception\IteratorDecoratorLimitException;
 
 /**
@@ -37,9 +36,9 @@ class IteratorDecoratorLimit extends IteratorDecoratorAbstract
     /**
      * Constructor
      *
-     * @param    IteratorInterface        iterator object
-     * @param    int                        item offset
-     * @param    int                        item count
+     * @param    IteratorInterface  $iteratorObject
+     * @param    int        $offset     item offset
+     * @param    int        $count      item count
      */
     public function __construct(IteratorInterface $iteratorObject, $offset = 0, $count = 50)
     {
@@ -59,8 +58,9 @@ class IteratorDecoratorLimit extends IteratorDecoratorAbstract
     }
 
     /**
-     * @param    int        item offset
-     * @return    void
+     * @param    int        $offset        item offset
+     * @return   void
+     * @throws   IteratorDecoratorLimitException
      */
     public function setItemOffset($offset)
     {
@@ -80,8 +80,9 @@ class IteratorDecoratorLimit extends IteratorDecoratorAbstract
     }
 
     /**
-     * @param    int        item count
-     * @return    void
+     * @param    int        $count      item count
+     * @return   void
+     * @throws   IteratorDecoratorLimitException
      */
     public function setItemCount($count)
     {

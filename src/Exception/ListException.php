@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility\Exception;
 
-use Naucon\Utility\Exception\CollectionException;
-
 /**
  * List Exception Class
  *

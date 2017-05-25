@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\MapAbstract;
-use Naucon\Utility\HashMapInterface;
 use Naucon\Utility\Exception\HashMapException;
 
 /**
@@ -24,8 +22,8 @@ abstract class HashMapAbstract extends MapAbstract implements HashMapInterface
 {
     /**
      * @access   protected
-     * @param    mixed        map key
-     * @return   string        hash key
+     * @param    mixed      $key        map key
+     * @return   string                 hash key
      */
     protected function keyHash($key)
     {
@@ -41,7 +39,7 @@ abstract class HashMapAbstract extends MapAbstract implements HashMapInterface
     /**
      * map contains key
      *
-     * @param    mixed        map key
+     * @param    mixed      $key        map key
      * @return   bool
      */
     public function hasKey($key)
@@ -53,8 +51,8 @@ abstract class HashMapAbstract extends MapAbstract implements HashMapInterface
     /**
      * get map value
      *
-     * @param    mixed        map key
-     * @return   mixed        map value
+     * @param    mixed      $key        map key
+     * @return   mixed                  map value
      */
     public function get($key)
     {
@@ -66,9 +64,10 @@ abstract class HashMapAbstract extends MapAbstract implements HashMapInterface
     /**
      * set map value
      *
-     * @param    mixed        map key
-     * @param    mixed        map value
-     * @return   mixed        map value
+     * @param    mixed      $key        map key
+     * @param    mixed      $value      map value
+     * @return   mixed                  map value
+     * @throws   HashMapException
      */
     public function set($key, $value)
     {
@@ -83,8 +82,8 @@ abstract class HashMapAbstract extends MapAbstract implements HashMapInterface
     /**
      * remove mapping
      *
-     * @param    mixed        map key
-     * @return   mixed        map value
+     * @param    mixed      $key        map key
+     * @return   mixed                  map value
      */
     public function remove($key)
     {

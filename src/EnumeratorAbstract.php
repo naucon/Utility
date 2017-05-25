@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\IteratorAbstract;
-use Naucon\Utility\EnumeratorInterface;
 use Naucon\Utility\Exception\EnumeratorException;
 
 /**
@@ -25,8 +23,8 @@ abstract class EnumeratorAbstract extends IteratorAbstract implements Enumerator
     /**
      * get value
      *
-     * @param    mixed            key
-     * @return   mixed            value
+     * @param    mixed      $key        key
+     * @return   mixed                  value
      */
     public function __get($key)
     {
@@ -41,8 +39,8 @@ abstract class EnumeratorAbstract extends IteratorAbstract implements Enumerator
     /**
      * set key value pair
      *
-     * @param    mixed            key
-     * @param    mixed            value
+     * @param    mixed      $key        key
+     * @param    mixed      $value      value
      * @return   void
      */
     public function __set($key, $value)
@@ -53,9 +51,10 @@ abstract class EnumeratorAbstract extends IteratorAbstract implements Enumerator
     /**
      * add or replace a value with a specified key
      *
-     * @param    mixed            key
-     * @param    mixed            value
-     * @return   mixed            value
+     * @param    mixed      $key        key
+     * @param    mixed      $value      value
+     * @return   mixed                  value
+     * @throws   EnumeratorException
      */
     public function set($key, $value)
     {
@@ -70,8 +69,8 @@ abstract class EnumeratorAbstract extends IteratorAbstract implements Enumerator
     }
 
     /**
-     * @param    mixed            key
-     * @return    bool
+     * @param    mixed      $key        key
+     * @return   bool
      */
     public function remove($key)
     {

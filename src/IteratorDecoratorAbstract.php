@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\IteratorInterface;
-
 /**
  * Iterator Decorator Abstract Class
  *
@@ -30,7 +28,7 @@ abstract class IteratorDecoratorAbstract implements IteratorInterface
     /**
      * Constructor
      *
-     * @param    IteratorInterface        iterator object
+     * @param    IteratorInterface      $iteratorObject        iterator object
      */
     public function __construct(IteratorInterface $iteratorObject)
     {
@@ -57,7 +55,7 @@ abstract class IteratorDecoratorAbstract implements IteratorInterface
 
     /**
      * @access    protected
-     * @param    IteratorInterface        iterator object
+     * @param     IteratorInterface     $iteratorObject     iterator object
      * @return    void
      */
     protected function setIteratorObject(IteratorInterface $iteratorObject)
@@ -202,9 +200,9 @@ abstract class IteratorDecoratorAbstract implements IteratorInterface
     /**
      * return true if iterator contains a specified index.
      *
-     * @param    mixed        index
-     * @return    bool        has index
-     * @see        IteratorInterface::hasIndex()
+     * @param    mixed      $index      index
+     * @return   bool                   has index
+     * @see      IteratorInterface::hasIndex()
      */
     public function hasIndex($index)
     {
@@ -212,9 +210,9 @@ abstract class IteratorDecoratorAbstract implements IteratorInterface
     }
 
     /**
-     * @param    mixed            element
-     * @return    mixed            index of element or false if not exist
-     * @see        IteratorInterface::indexOf()
+     * @param    mixed      $element        element
+     * @return   mixed                      index of element or false if not exist
+     * @see      IteratorInterface::indexOf()
      */
     public function indexOf($element)
     {
@@ -224,9 +222,9 @@ abstract class IteratorDecoratorAbstract implements IteratorInterface
     /**
      * set item of specified position to current item
      *
-     * @param    int                item position
-     * @return    void
-     * @see        IteratorInterface::setItemPosition()
+     * @param    int        $position       item position
+     * @return   void
+     * @see      IteratorInterface::setItemPosition()
      */
     public function setItemPosition($position)
     {
@@ -237,7 +235,7 @@ abstract class IteratorDecoratorAbstract implements IteratorInterface
      * count items
      *
      * @return    int            number of items
-     * @see        IteratorInterface::countItems()
+     * @see       IteratorInterface::countItems()
      */
     public function countItems()
     {
@@ -248,7 +246,7 @@ abstract class IteratorDecoratorAbstract implements IteratorInterface
      * return the number of items
      *
      * @return    int            number of items
-     * @see     IteratorInterface::countItems()
+     * @see       IteratorInterface::countItems()
      */
     public function count()
     {

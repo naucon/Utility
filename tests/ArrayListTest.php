@@ -24,7 +24,7 @@ class ArrayListTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    ArrayList
+     * @param    ArrayList      $listObject
      * @return   void
      */
     public function testCount(ArrayList $listObject)
@@ -35,7 +35,7 @@ class ArrayListTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    ArrayList
+     * @param    ArrayList      $listObject
      * @return   ArrayList
      */
     public function testIteration(ArrayList $listObject)
@@ -61,7 +61,7 @@ class ArrayListTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    ArrayList
+     * @param    ArrayList      $listObject
      * @return   void
      */
     public function testToArray(ArrayList $listObject)
@@ -83,7 +83,7 @@ class ArrayListTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    ArrayList
+     * @param    ArrayList      $listObject
      * @return   void
      */
     public function testContains(ArrayList $listObject)
@@ -96,7 +96,7 @@ class ArrayListTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    ArrayList
+     * @param    ArrayList      $listObject
      * @return   void
      */
     public function testGet(ArrayList $listObject)
@@ -115,7 +115,7 @@ class ArrayListTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    ArrayList
+     * @param    ArrayList      $listObject
      * @return   ArrayList
      */
     public function testAdd(ArrayList $listObject)
@@ -136,7 +136,7 @@ class ArrayListTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testAdd
-     * @param    ArrayList
+     * @param    ArrayList      $listObject
      * @return   ArrayList
      */
     public function testAddAll(ArrayList $listObject)
@@ -158,7 +158,7 @@ class ArrayListTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testAddAll
-     * @param    ArrayList
+     * @param    ArrayList      $listObject
      * @return   ArrayList
      */
     public function testAddWithIndex(ArrayList $listObject)
@@ -179,7 +179,7 @@ class ArrayListTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testAddWithIndex
-     * @param    ArrayList
+     * @param    ArrayList      $listObject
      * @return   ArrayList
      */
     public function testSet(ArrayList $listObject)
@@ -255,7 +255,7 @@ class ArrayListTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    ArrayList
+     * @param    ArrayList      $listObject
      * @return   void
      */
     public function testClear(ArrayList $listObject)

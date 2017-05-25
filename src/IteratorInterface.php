@@ -72,22 +72,27 @@ interface IteratorInterface extends \Iterator, \Countable
     /**
      * return true if iterator contains a specified index.
      *
-     * @param    mixed        index
-     * @return    bool        has index
+     * @param    mixed      $index      index
+     * @return   bool                   has index
      */
     public function hasIndex($index);
 
     /**
-     * @param    mixed            element
-     * @return    mixed            index of element or false if not exist
+     * @param    mixed      $element        element
+     * @return   mixed                      index of element or false if not exist
      */
     public function indexOf($element);
 
     /**
+     * @return    int                current item position
+     */
+    public function getItemPosition();
+
+    /**
      * set item of specified position to current item
      *
-     * @param    int                item position
-     * @return    void
+     * @param    int        $position       item position
+     * @return   void
      */
     public function setItemPosition($position);
 

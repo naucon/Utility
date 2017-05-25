@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\EnumeratorAbstract;
-
 /**
  * Enumerator Class
  *
@@ -24,10 +22,7 @@ class Enumerator extends EnumeratorAbstract
     /**
      * Constructor
      *
-     * @param    mixed        value 1
-     * @param    mixed        value 2
-     * @param    mixed ...
-     * @param    mixed        value n
+     * @param    mixed      ...     $args
      */
     public function __construct()
     {

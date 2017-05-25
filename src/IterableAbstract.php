@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\IterableInterface;
-use Naucon\Utility\IteratorInterface;
 use Naucon\Utility\Exception\IterableException;
 
 /**
@@ -42,6 +40,7 @@ abstract class IterableAbstract implements IterableInterface
      * return a iterator
      *
      * @return    IteratorInterface
+     * @throws    IterableException
      */
     public function getIterator()
     {

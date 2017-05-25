@@ -9,7 +9,6 @@
  */
 namespace Naucon\Utility\Tests;
 
-use Naucon\Utility\Composite;
 use Naucon\Utility\CompositeAbstract;
 
 class CompositeTest extends \PHPUnit_Framework_TestCase
@@ -35,8 +34,8 @@ class CompositeTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @param    array
-     * @param    CompositeAbstract
-     * @return   void
+     * @param    CompositeAbstract      $elementObject
+     * @return   array
      */
     public function buildTree(CompositeAbstract $elementObject)
     {
@@ -54,7 +53,7 @@ class CompositeTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    CompositeAbstract
+     * @param    CompositeAbstract      $elementObject
      * @return   void
      */
     public function testTree(CompositeAbstract $elementObject)
@@ -74,7 +73,7 @@ class CompositeTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    CompositeAbstract
+     * @param    CompositeAbstract      $elementObject
      * @return   void
      */
     public function testRemove(CompositeAbstract $elementObject)
@@ -112,6 +111,6 @@ class CompositeElement extends CompositeAbstract
 
     public function __toString()
     {
-        return $this->state;
+        return (string)$this->state;
     }
 }

@@ -9,9 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\Iterable;
-use Naucon\Utility\Iterator;
-use Naucon\Utility\CollectionInterface;
 use Naucon\Utility\Exception\CollectionException;
 
 /**
@@ -35,8 +32,8 @@ abstract class CollectionAbstract extends IterableAbstract implements Collection
     /**
      * add a element to the end of the collection
      *
-     * @param    mixed            element
-     * @return    void
+     * @param    mixed      $element        element
+     * @return   void
      */
     public function add($element)
     {
@@ -47,8 +44,9 @@ abstract class CollectionAbstract extends IterableAbstract implements Collection
     /**
      * add elements to the end of the collection
      *
-     * @param    array            elements
-     * @return    void
+     * @param    array      $elements       elements
+     * @return   void
+     * @throws   CollectionException
      */
     public function addAll(array $elements)
     {
@@ -68,14 +66,12 @@ abstract class CollectionAbstract extends IterableAbstract implements Collection
     public function clear()
     {
         $this->_items = array();
-        $this->_itemPosition = 0;
-        $this->_itemValid = false;
     }
 
     /**
      * collection contains a given element
      *
-     * @param    mixed            element
+     * @param    mixed      $element            element
      * @return    bool            true if the collection contains a specified element
      */
     public function contains($element)
@@ -111,8 +107,8 @@ abstract class CollectionAbstract extends IterableAbstract implements Collection
 
     /**
      * @access    protected
-     * @param    mixed            element
-     * @return    mixed            index of element or false if not exist
+     * @param     mixed     $element        element
+     * @return    mixed                     index of element or false if not exist
      */
     protected function indexOf($element)
     {
@@ -122,8 +118,8 @@ abstract class CollectionAbstract extends IterableAbstract implements Collection
     /**
      * remove a specified element from the collection
      *
-     * @param    mixed            element
-     * @return    bool
+     * @param    mixed      $element        element
+     * @return   bool
      */
     public function remove($element)
     {

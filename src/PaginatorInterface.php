@@ -24,13 +24,13 @@ interface PaginatorInterface
     public function getCurrentPageNumber();
 
     /**
-     * @param    int                current page number
+     * @param    int        $pageNumber         current page number
      * @return   void
      */
     public function setCurrentPageNumber($pageNumber);
 
     /**
-     * @param    int                current page number
+     * @param    int        $pageNumber         current page number
      * @return   void
      * @see      PaginatorAbstract::setCurrentPageNumber()
      */
@@ -52,7 +52,7 @@ interface PaginatorInterface
     public function getItemsPerPage();
 
     /**
-     * @param    int                number of items per page
+     * @param    int        $itemsPerPage           number of items per page
      * @return   void
      */
     public function setItemsPerPage($itemsPerPage);
@@ -63,32 +63,32 @@ interface PaginatorInterface
     public function countPages();
 
     /**
-     * @return    bool        current page is the first page
+     * @return    bool              current page is the first page
      */
     public function isFirstPage();
 
     /**
-     * @return    bool        current page is the last page
+     * @return    bool              current page is the last page
      */
     public function isLastPage();
 
     /**
-     * @return    bool        has a next page
+     * @return    bool              has a next page
      */
     public function hasNextPage();
 
     /**
-     * @return    int            next page number or 0
+     * @return    int               next page number or 0
      */
     public function getNextPageNumber();
 
     /**
-     * @return    bool        has a previous page
+     * @return    bool              has a previous page
      */
     public function hasPreviousPage();
 
     /**
-     * @return    int            previous page number or 0
+     * @return    int               previous page number or 0
      */
     public function getPreviousPageNumber();
 }

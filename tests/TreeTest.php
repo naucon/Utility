@@ -28,7 +28,7 @@ class TreeTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    TreeInterface
+     * @param    TreeInterface      $treeRootObject
      * @return   TreeInterface
      */
     public function testAdd(TreeInterface $treeRootObject)
@@ -60,7 +60,7 @@ class TreeTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testAdd
-     * @param    TreeInterface
+     * @param    TreeInterface      $treeRootObject
      * @return   void
      */
     public function testCount(TreeInterface $treeRootObject)
@@ -70,7 +70,7 @@ class TreeTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testAdd
-     * @param    TreeInterface
+     * @param    TreeInterface      $treeRootObject
      * @return   void
      */
     public function testRemove(TreeInterface $treeRootObject)
@@ -128,7 +128,7 @@ class TreeTest extends \PHPUnit_Framework_TestCase
 //    }
 
     /**
-     * @param    TreeNodeInterface
+     * @param    TreeNodeInterface      $treeNodeObject
      * @return   array
      */
     public function buildTree(TreeNodeInterface $treeNodeObject)
@@ -148,7 +148,7 @@ class TreeTest extends \PHPUnit_Framework_TestCase
                 }
             }
         } else {
-            $array[] = $treeChildNodeObject->getValue();
+            $array[] = $treeNodeObject->getValue();
         }
         return $array;
     }

@@ -24,7 +24,7 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Collection
+     * @param    Collection     $collectionObject
      * @return   void
      */
     public function testCount(Collection $collectionObject)
@@ -34,7 +34,7 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Collection
+     * @param    Collection     $collectionObject
      * @return   Collection
      */
     public function testIteration(Collection $collectionObject)
@@ -60,7 +60,7 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Collection
+     * @param    Collection     $collectionObject
      * @return   void
      */
     public function testToArray(Collection $collectionObject)
@@ -82,7 +82,7 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Collection
+     * @param    Collection     $collectionObject
      * @return   void
      */
     public function testContains(Collection $collectionObject)
@@ -95,7 +95,7 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Collection
+     * @param    Collection     $collectionObject
      * @return   Collection
      */
     public function testAdd(Collection $collectionObject)
@@ -116,7 +116,7 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testAdd
-     * @param    Collection
+     * @param    Collection     $collectionObject
      * @return   void
      */
     public function testAddAll(Collection $collectionObject)
@@ -161,7 +161,7 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends  testInit
-     * @param    Collection
+     * @param    Collection     $collectionObject
      * @return   void
      */
     public function testClear(Collection $collectionObject)

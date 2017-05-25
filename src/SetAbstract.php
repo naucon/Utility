@@ -9,9 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\CollectionAbstract;
-use Naucon\Utility\Exception\SetException;
-
 /**
  * Abstract Set Class
  *
@@ -24,7 +21,7 @@ abstract class SetAbstract extends CollectionAbstract
     /**
      * add a element to the end of the collection
      *
-     * @param    mixed            element
+     * @param    mixed      $element        element
      * @return   bool
      */
     public function add($element)
@@ -42,7 +39,7 @@ abstract class SetAbstract extends CollectionAbstract
     /**
      * add elements to the end of the collection
      *
-     * @param    array            elements
+     * @param    array      $elements       elements
      * @return   void
      */
     public function addAll(array $elements)

@@ -9,8 +9,6 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\PaginatorAbstract;
-
 /**
  * Paginator Class
  * Pagination process of deviding entries into pages
@@ -23,9 +21,8 @@ class Paginator extends PaginatorAbstract
     /**
      * Constructor
      *
-     * @param    array            items
-     * @param    int              item offset
-     * @param    int              item count
+     * @param    array      $items              items
+     * @param    int        $itemsPerPage       item offset
      */
     public function __construct(array $items = array(), $itemsPerPage = 50)
     {
