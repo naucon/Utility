@@ -10,13 +10,20 @@
 namespace Naucon\Utility;
 
 /**
- * Iterable Interface
- * a Iterator Decorator
+ * Iterator Aware Class
  *
- * @abstract
  * @package    Utility
  * @author     Sven Sanzenbacher
  */
-interface IterableInterface extends \IteratorAggregate, \Countable
+class IteratorAware extends IteratorAwareAbstract
 {
+    /**
+     * Constructor
+     *
+     * @param    IteratorInterface      $iteratorObject
+     */
+    public function __construct(IteratorInterface $iteratorObject = null)
+    {
+        $this->_iterator = $iteratorObject;
+    }
 }

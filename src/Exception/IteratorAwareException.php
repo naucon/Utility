@@ -10,11 +10,11 @@
 namespace Naucon\Utility\Exception;
 
 /**
- * Iterable Limit Exception Class
+ * Iterator Aware Exception Class
  *
  * @package    Utility
  * @author     Sven Sanzenbacher
  */
-class IterableLimitException extends \Exception
+class IteratorAwareException extends \Exception
 {
 }

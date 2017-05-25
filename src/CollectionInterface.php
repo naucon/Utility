@@ -16,7 +16,7 @@ namespace Naucon\Utility;
  * @package    Utility
  * @author     Sven Sanzenbacher
  */
-interface CollectionInterface extends IterableInterface
+interface CollectionInterface extends IteratorAwareInterface
 {
     /**
      * add a element to the end of the collection

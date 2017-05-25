@@ -18,7 +18,7 @@ use Naucon\Utility\Exception\CollectionException;
  * @package    Utility
  * @author     Sven Sanzenbacher
  */
-abstract class CollectionAbstract extends IterableAbstract implements CollectionInterface
+abstract class CollectionAbstract extends IteratorAwareAbstract implements CollectionInterface
 {
     /**
      * contains all items of the collection

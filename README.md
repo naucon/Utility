@@ -8,7 +8,7 @@ This package provides miscellaneous php interfaces and classes to structure and 
 ### Features
 
 * Iterator
-    * Iterable
+    * IteratorAware
     * IteratorReverse
     * IteratorLimit
     * Paginator
@@ -90,27 +90,27 @@ In contrast to the `Collection` or the `ArrayList` the `Iterator` is only can re
     // output: foo bar
 
 
-### Iterable
+### IteratorAware
 
-`Iterable` extends `IterableAbstract`
-`IterableAbstract` implements `IterableInterface`
-`IterableInterface` extends `IteratorAggregate`, `Countable`
+`IteratorAware` extends `IteratorAwareAbstract`
+`IteratorAwareAbstract` implements `IteratorAwareInterface`
+`IteratorAwareInterface` extends `IteratorAggregate`, `Countable`
 
-The `Iterable` class works like the `Iterator` class. Instead of a array it holds the data in a internal `Iterator` instance.
+The `IteratorAware` class works like the `Iterator` class. Instead of a array it holds the data in a internal `Iterator` instance.
 Without any methodes to cycle data the class can be iterated with the `foreach()` command. To count data it provides the methode `count()`.
 The internal `Iterator` can be accessed through the method `getIterator()`.
 The class implements the `IteratorAggregate` and `Countable` interface.
 
     // create instance
-    use Naucon\Utility\Iterable;
+    use Naucon\Utility\IteratorAware;
     use Naucon\Utility\Iterator;
-    $iterableObject = new Iterable(new Iterator(array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)));
+    $iteratorAwareObject = new IteratorAware(new Iterator(array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)));
 
     // count
-    echo count($iterableObject); // output: 10
+    echo count($iteratorAwareObject); // output: 10
 
     // iterate
-    foreach ($iterableObject as $key => $value) {
+    foreach ($iteratorAwareObject as $key => $value) {
         echo $value . '';
     }
     // output: 1 2 3 4 5 6 7 8 9 10
@@ -216,8 +216,8 @@ It also provides the following methods to control pages: `getCurrentPageNumber()
 `IteratorDecoratorAbstract` implements `IteratorInterface`
 `IteratorInterface` extends `Iterator`, `Countable`
 
-The `IteratorDecoratorAbstract` is a abstract class. Like the `Iterable` class it holds the data in a internal `Iterator` instance.
-Instead of the `Iterable` it implements every method of the `IteratorInterface` to be completely compatible to a normal `Iterator`.
+The `IteratorDecoratorAbstract` is a abstract class. Like the `IteratorAware` class it holds the data in a internal `Iterator` instance.
+Instead of the `IteratorAware` it implements every method of the `IteratorInterface` to be completely compatible to a normal `Iterator`.
 
 His purpose is to create a abstraction layer between `Iterator` and a individual implementation.
 
@@ -284,13 +284,13 @@ It have the same methods as the `Paginator` class.
 ### Collection
 
 `Collection` extends `CollectionAbstract`
-`CollectionAbstract` extends `IterableAbstract` implements `CollectionInterface`
-`IterableAbstract` implements `IterableInterface`
-`IterableInterface` extends `IteratorAggregate`, `Countable`
+`CollectionAbstract` extends `IteratorAwareAbstract` implements `CollectionInterface`
+`IteratorAwareAbstract` implements `IteratorAwareInterface`
+`IteratorAwareInterface` extends `IteratorAggregate`, `Countable`
 
-The `Collection` class holds, add and remove data in a internal array. Also it implements the `IterableInterface` to iterated the data with the `foreach()` command.
+The `Collection` class holds, add and remove data in a internal array. Also it implements the `IteratorAwareInterface` to iterated the data with the `foreach()` command.
 
-In contrast to the `Iterator` or `Iterable` the `Collection` can retrieve, add and remove data. But he also has no control of the index.
+In contrast to the `Iterator` or `IteratorAware` the `Collection` can retrieve, add and remove data. But he also has no control of the index.
 
 It provides the following methods to  add and count data: `add()`, `addAll()`, `clear()`, `contains()`, `isEmpty()`, `getIterator()`, `remove()`, `count()`, `toArray()`.
 The class implements the `IteratorAggregate` and `Countable` interface of PHP.
@@ -350,8 +350,8 @@ The class implements the `IteratorAggregate` and `Countable` interface of PHP.
 
 `CollectionDecorator` extends `CollectionDecoratorAbstract`
 `CollectionDecoratorAbstract` implements `CollectionInterface`
-`CollectionInterface` extends `IterableInterface`
-`IterableInterface` extends `IteratorAggregate`, `Countable`
+`CollectionInterface` extends `IteratorAwareInterface`
+`IteratorAwareInterface` extends `IteratorAggregate`, `Countable`
 
 The `CollectionDecorator` is a abstract class. Like the `IteratorDecoratorAbstract` class it holds the data in a internal `Collection` instance.
 It implements every method of the `CollectionInterface` to be completely compatible to a normal `Collection`.
@@ -363,11 +363,11 @@ His purpose is to create a abstraction layer between `Collection` and a individu
 
 `ArrayList` extends `ListAbstract`
 `ListAbstract` extends `CollectionAbstract` implements `ListInterface`
-`CollectionAbstract` extends `IterableAbstract` implements `CollectionInterface`
-`IterableAbstract` implements `IterableInterface`
-`IterableInterface` extends `IteratorAggregate`, `Countable`
+`CollectionAbstract` extends `IteratorAwareAbstract` implements `CollectionInterface`
+`IteratorAwareAbstract` implements `IteratorAwareInterface`
+`IteratorAwareInterface` extends `IteratorAggregate`, `Countable`
 
-The `ArrayList` class holds, add and remove data in a internal array with a individual index. Also it implements the `CollectionInterface` and therefore the `IterableInterface` to iterated the data with the `foreach()` command.
+The `ArrayList` class holds, add and remove data in a internal array with a individual index. Also it implements the `CollectionInterface` and therefore the `IteratorAwareInterface` to iterated the data with the `foreach()` command.
 
 In contrast to the `Collection` he has control of the index.
 
@@ -543,8 +543,8 @@ The class implements the `Countable` interface of PHP.
 
 `Set` extends `SetAbstract`
 `SetAbstract` extends `CollectionAbstract`
-`CollectionAbstract` extends `IterableAbstract` implements `CollectionInterface`
-`IterableAbstract` implements `IterableInterface`
+`CollectionAbstract` extends `IteratorAwareAbstract` implements `CollectionInterface`
+`IteratorAwareAbstract` implements `IteratorAwareInterface`
 
 The `Set` class works like the `Collection` Class. It holds, add and remove data in a internal array.
 A existing value can only added once. Also data can be interated throught the `foreach()` command.
@@ -610,8 +610,8 @@ The class implements the `IteratorAggregate` and `Countable` interface of PHP.
 `HashSet` extends `HashSetAbstract`
 `HashSetAbstract` extends `SetAbstract` implements `HashSetInterface`
 `SetAbstract` extends `CollectionAbstract`
-`CollectionAbstract` extends `IterableAbstract` implements `CollectionInterface`
-`IterableAbstract` implements `IterableInterface`
+`CollectionAbstract` extends `IteratorAwareAbstract` implements `CollectionInterface`
+`IteratorAwareAbstract` implements `IteratorAwareInterface`
 
 Based on the `Set` the `HashSet` hold, add and remove data in the same way as the `Set` class do.
 In contrast to the `Set` class the key in an `HashSet` is a hash of its value. The `HashSet` converts a given instance of an value with the `spl_object_hash()` function to a hash key.
@@ -627,14 +627,14 @@ The class implements the `IteratorAggregate` and `Countable` interface of PHP.
 `Tree` extends `TreeAbstract`
 `TreeAbstract` extends `TreeNodeAbstract` implements `TreeInterface`
 `TreeNodeAbstract` implements `TreeNodeInterface`
-`TreeInterface` extends `TreeNodeInterface`, `IterableInterface`
-`IterableInterface` extends `IteratorAggregate`, `Countable`
+`TreeInterface` extends `TreeNodeInterface`, `IteratorAwareInterface`
+`IteratorAwareInterface` extends `IteratorAggregate`, `Countable`
 
 The `Tree` class holds hierarchical structure data in a internal `HashSet`. The class can be iterated with the `foreach()` command to retrieve the data from the `HashSet`.
 It also provides the following methods to retrieve, add, remove data: `getIterator()`, `hasChilds()`, `count()`, `add()`, `addChild()`, `removeChild()`, `hasParent()`, `getParent()`, `removeNode()`, `rewind()`, `key()`, `indexOf()`, `hasIndex()`, `setItemPosition()`, `count()`.
 The class implements the `IteratorAggregate` and `Countable` interface of PHP.
 
-In contrast to the `Iterable`, `Iterator` or `Collection` the `Tree` only works with instances of `TreeNodeInterface`.
+In contrast to the `IteratorAware`, `Iterator` or `Collection` the `Tree` only works with instances of `TreeNodeInterface`.
 
     // create instance
     use Naucon\Utility\TreeNodeAbstract;

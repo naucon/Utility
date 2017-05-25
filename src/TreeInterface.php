@@ -16,7 +16,7 @@ namespace Naucon\Utility;
  * @package    Utility
  * @author     Sven Sanzenbacher
  */
-interface TreeInterface extends TreeNodeInterface, IterableInterface
+interface TreeInterface extends TreeNodeInterface, IteratorAwareInterface
 {
     /**
      * @param    TreeNodeInterface      $childObject        child tree node

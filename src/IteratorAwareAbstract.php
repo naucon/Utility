@@ -9,16 +9,16 @@
  */
 namespace Naucon\Utility;
 
-use Naucon\Utility\Exception\IterableException;
+use Naucon\Utility\Exception\IteratorAwareException;
 
 /**
- * Iterable Abstract Class
+ * Iterator Aware Abstract Class
  *
  * @abstract
  * @package    Utility
  * @author     Sven Sanzenbacher
  */
-abstract class IterableAbstract implements IterableInterface
+abstract class IteratorAwareAbstract implements IteratorAwareInterface
 {
     /**
      * @access    protected
@@ -40,14 +40,14 @@ abstract class IterableAbstract implements IterableInterface
      * return a iterator
      *
      * @return    IteratorInterface
-     * @throws    IterableException
+     * @throws    IteratorAwareException
      */
     public function getIterator()
     {
         if (!is_null($this->_iterator)) {
             return $this->_iterator;
         } else {
-            throw new IterableException('Iterable has no Iterator.', E_ERROR);
+            throw new IteratorAwareException('IteratorAware has no Iterator.', E_ERROR);
         }
     }
 
