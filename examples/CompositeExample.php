@@ -1,4 +1,6 @@
 <?php
+require realpath(__DIR__ . '/../') . '/vendor/autoload.php';
+
 use Naucon\Utility\CompositeAbstract;
 
 class CompositeElement extends CompositeAbstract
@@ -12,7 +14,7 @@ class CompositeElement extends CompositeAbstract
 
     public function __toString()
     {
-        return $this->state;
+        return (string)$this->state;
     }
 }
 

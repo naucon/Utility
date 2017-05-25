@@ -1,4 +1,6 @@
 <?php
+require realpath(__DIR__ . '/../') . '/vendor/autoload.php';
+
 use Naucon\Utility\Enumerator;
 
 $enumeratorObject1 = new Enumerator('RED', 'BLUE', 'GREEN', 'YELLOW', 'BLACK');

@@ -1,4 +1,6 @@
 <?php
+require realpath(__DIR__ . '/../') . '/vendor/autoload.php';
+
 use Naucon\Utility\TreeNodeAbstract;
 use Naucon\Utility\TreeInterface;
 use Naucon\Utility\TreeAbstract;

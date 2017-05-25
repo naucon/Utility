@@ -1,4 +1,6 @@
 <?php
+require realpath(__DIR__ . '/../') . '/vendor/autoload.php';
+
 use Naucon\Utility\Collection;
 
 $collectionObject = new Collection(array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));

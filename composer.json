@@ -1,6 +1,6 @@
 {
     "name": "naucon/utility",
-    "description": "This package contains miscellaneous php interfaces and classes to structure and organize data as well as groups of objects",
+    "description": "This package provides miscellaneous php interfaces and classes to structure and organize data as well as groups of objects",
     "keywords": ["utility", "collection", "list", "map", "set", "iterator", "composite", "delegate", "iterable", "paginator", "observer"],
     "homepage": "https://github.com/naucon/Utility",
     "type": "library",

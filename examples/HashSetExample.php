@@ -1,4 +1,6 @@
 <?php
+require realpath(__DIR__ . '/../') . '/vendor/autoload.php';
+
 use Naucon\Utility\HashSet;
 use Naucon\Utility\Exception\HashSetException;
 

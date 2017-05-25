@@ -10,7 +10,7 @@
     </php>
 
     <testsuites>
-        <testsuite name="Naucon Utility Package Testsuite">
+        <testsuite name="Naucon package testsuite">
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>

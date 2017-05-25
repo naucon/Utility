@@ -2,7 +2,7 @@
 
 ## About
 
-This package contains miscellaneous php interfaces and classes to structure and organize data as well as groups of objects.
+This package provides miscellaneous php interfaces and classes to structure and organize data as well as groups of objects.
 
 
 ### Features
@@ -34,7 +34,7 @@ This package contains miscellaneous php interfaces and classes to structure and 
 This package is inspired by java.util package. The concepts has been adjusted to the PHP world.
 
 
-### Compatibility
+## Compatibility
 
 * PHP5.3
 
@@ -44,6 +44,18 @@ This package is inspired by java.util package. The concepts has been adjusted to
 install the latest version via composer 
 
     composer require naucon/utility
+
+
+## Example
+
+Start the build-in webserver to see the examples in action:
+
+    cd examples
+    php -S 127.0.0.1:3000
+
+open url in browser
+
+    http://127.0.0.1:3000/index.html
 
 
 ## Basic Usage

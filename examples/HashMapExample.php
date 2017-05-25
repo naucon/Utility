@@ -1,4 +1,6 @@
 <?php
+require realpath(__DIR__ . '/../') . '/vendor/autoload.php';
+
 use Naucon\Utility\HashMap;
 
 class FooString
@@ -12,7 +14,7 @@ class FooString
 
     public function __toString()
     {
-        return $this->value;
+        return (string)$this->value;
     }
 }
 

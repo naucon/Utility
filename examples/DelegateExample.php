@@ -1,4 +1,5 @@
 <?php
+require realpath(__DIR__ . '/../') . '/vendor/autoload.php';
 
 use Naucon\Utility\Delegate;
 use Naucon\Utility\Delegator;

@@ -1,4 +1,6 @@
 <?php
+require realpath(__DIR__ . '/../') . '/vendor/autoload.php';
+
 use Naucon\Utility\ObserverAbstract;
 use Naucon\Utility\ObservableAbstract;
 use Naucon\Utility\ObservableInterface;
